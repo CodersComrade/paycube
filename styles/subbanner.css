@@ -1,0 +1,16 @@
+.sub-banner {
+    background-color: #0A131E;
+}
+
+.card1 {
+    background-color: #0A131E;
+}
+
+.card2 {
+    background-color: #FFCB73;
+    clip-path: polygon(4% 0, 95% 0, 100% 100%, 0% 100%);
+}
+
+.author-name {
+    overflow: hidden;
+}

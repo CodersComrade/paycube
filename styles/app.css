@@ -1,0 +1,25 @@
+.app-section {
+    background-color: #0A131E;
+}
+
+.app-bg {
+    background-color: #FFCB73;
+    clip-path: polygon(0% 0%, 86% 0, 100% 50%, 88% 100%, 0% 100%);
+    border-radius: 20px;
+}
+
+.btn-app {
+    background-color: #0A131E;
+    color: #FFCB73;
+    margin-top: 70px;
+    clip-path: polygon(0% 0%, 86% 0, 100% 50%, 88% 100%, 0% 100%);
+}
+
+.app-img-bg {
+    padding: 20px;
+}
+
+.app-img {
+    width: 200px;
+    height: 150px;
+}

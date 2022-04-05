@@ -1,0 +1,46 @@
+.features-section {
+    background-color: #0A131E;
+}
+
+.feature-bg {
+    background-image: url("/feature1bg.png");
+    height: 160vh auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.feature-bg2 {
+    background-image: url("/feature2bg.png");
+    height: 160vh auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.feature-bg3 {
+    background-image: url("/feature3bg.png");
+    height: 160vh auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.features-heading {
+    color: #FFCB73;
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.feature-box {
+    background: transparent;
+}
+
+.feature-title {
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.feature-title-color {
+    color: #FFCB73;
+}
