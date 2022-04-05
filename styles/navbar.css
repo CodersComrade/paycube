@@ -5,6 +5,7 @@
 .logo {
     color: white;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .logo-color {

@@ -42,7 +42,7 @@ const Features = () => {
                             </div>
                             <div className="col-md-5">
                                 <div className="card-body">
-                                    <h3 className="card-title text-white feature-title mb-4">Keep Track <span className="feature-title-color">Your Exenditure</span></h3>
+                                    <h3 className="card-title text-white feature-title mb-4">Keep Track <span className="feature-title-color">Your Expenditure</span></h3>
                                     <p className="card-text text-muted">It’s easy to make this part of your everyday routine thanks to expense tracker apps that help you manage your money on the go. These apps certainly overlap with budgeting apps, but while the latter provide a big-picture view of your finances, expense tracker apps put more of an emphasis on your spending. These apps usually categorize your expenses and help you get a good idea of your purchasing behavior.</p>
                                 </div>
                             </div>

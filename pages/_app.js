@@ -5,10 +5,12 @@ import '../styles/subbanner.css'
 import '../styles/features.css'
 import '../styles/app.css'
 import '../styles/footer.css'
+import '../styles/registration-login.css'
 
 import Head from 'next/head'
 import Script from 'next/script'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 function MyApp({ Component, pageProps }) {
   return <>
@@ -18,6 +20,7 @@ function MyApp({ Component, pageProps }) {
     <Navbar></Navbar>
     <Script id="bootstrap-cdn" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossOrigin="anonymous"></Script>
     <Component {...pageProps} />
+    <Footer></Footer>
   </>
 }
 

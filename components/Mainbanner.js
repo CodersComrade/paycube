@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 const Mainbanner = () => {
     return (
@@ -12,7 +13,9 @@ const Mainbanner = () => {
                             <div className='banner-texts mt-3'>
                                 <h1 className='banner-title mb-3'>Make <span className='title-color'>Money Management</span> More <span className='title-color'>Easier</span></h1>
                                 <p className='text-muted'>Annual income twenty pounds, annual expenditure nineteen six, result happiness. Annual income twenty pounds, annual expenditure twenty pound ought and six, result misery. --Charles Dickens</p>
-                                <button className='btn btn-bg mt-4 fw-bold'>Sign Up For Free</button>
+                                <Link href="/register">
+                                    <button className='btn btn-bg mt-4 fw-bold'>Sign Up For Free</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

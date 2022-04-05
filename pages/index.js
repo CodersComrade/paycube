@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import App from '../components/app'
 import Features from '../components/Features'
-import Footer from '../components/Footer'
 import Mainbanner from '../components/Mainbanner'
 import Subbanner from '../components/Subbanner'
 
@@ -17,7 +16,6 @@ export default function Home() {
       <Subbanner></Subbanner>
       <Features></Features>
       <App></App>
-      <Footer></Footer>
     </div>
   )
 }

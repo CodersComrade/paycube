@@ -1,0 +1,32 @@
+.registration-page {
+    background-image: url("/feature3bg.png");
+    height: 100vh auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-page {
+    background-image: url("/feature2bg.png");
+    height: 100vh auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rl-title {
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.rl-title-color {
+    color: #FFCB73;
+}
+
+.redirect-text {
+    color: #FFCB73;
+}
+
+.go-login {
+    cursor: pointer;
+}
