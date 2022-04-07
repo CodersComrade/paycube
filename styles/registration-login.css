@@ -1,5 +1,5 @@
 .registration-page {
-    background-image: url("/feature3bg.png");
+    background-color: #0A131E;
     height: 100vh auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -7,7 +7,7 @@
 }
 
 .login-page {
-    background-image: url("/feature2bg.png");
+    background-color: #0A131E;
     height: 100vh auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,11 +20,11 @@
 }
 
 .rl-title-color {
-    color: #FFCB73;
+    color: #ed3030;
 }
 
 .redirect-text {
-    color: #FFCB73;
+    color: #ed3030;
 }
 
 .go-login {

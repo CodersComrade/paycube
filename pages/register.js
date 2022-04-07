@@ -25,7 +25,7 @@ const Register = () => {
                                     <input type="password" className="form-control" id="inputConfirmPassword4" autoComplete="off" />
                                 </div>
                                 <div className="col-md-3">
-                                    <input type="submit" className="btn btn-bg fw-bold mt-3 mb-5" value="Register" />
+                                    <input type="submit" className="btn btn-bg fw-bold mt-3 mb-5 rounded-pill" value="Register" />
                                 </div>
                                 <div className="col-md-9">
                                     <p className="redirect-text mt-4">Already Have An Account? <Link href="/login"><span className="text-white fw-bold go-login">Login Now</span></Link> </p>

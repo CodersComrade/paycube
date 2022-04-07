@@ -19,7 +19,7 @@ const Subbanner = () => {
                                 <img src="/card2.svg" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <p className="card-text">You can only become truly accomplished at something you love. Don’t make money your goal. Instead, pursue the things you love doing, and then do them so well that people can’t take their eyes off you. </p>
-                                    <h6 className="text-dark author-name">--Maya Angelou</h6>
+                                    <h6 className="text-white author-name">--Maya Angelou</h6>
                                 </div>
                             </div>
                         </div>

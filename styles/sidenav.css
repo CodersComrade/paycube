@@ -1,0 +1,35 @@
+.sidenav-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 3px solid #ed3030;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #09111b, #0b1420);
+    box-shadow: 20px 20px 60px #09101a,
+        -20px -20px 60px #0c1623;
+}
+
+.id-name {
+    color: #ed3030;
+}
+
+.sidenav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-left: 3px solid #ed3030;
+    border-radius: 10px;
+    background-color: #ed3030;
+}
+
+.menu {
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.menu:hover {
+    color: #0A131E;
+    font-weight: 700;
+}

@@ -14,19 +14,18 @@
 }
 
 .divider {
-    margin-top: 7px;
     height: 10px;
-    background-color: #FFCB73;
+    background-color: #ed3030;
 }
 
 .follow-us-title {
     font-size: 2rem;
-    color: #FFCB73;
+    color: #ed3030;
     overflow: hidden;
 }
 
 .social-icons {
-    background-color: #FFCB73;
+    background-color: #ed3030;
     width: 320px;
     display: flex;
     justify-content: center;

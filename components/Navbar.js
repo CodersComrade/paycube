@@ -8,7 +8,7 @@ const Navbar = () => {
                     <Link className="navbar-brand" href="/"><h1 className='logo fw-bold'><span className='logo-color'>Pay</span>Cube</h1></Link>
                     <div className='ms-auto'>
                         <Link href="/register">
-                            <button className='btn btn-bg fw-bold'>Login / Register</button>
+                            <button className='btn btn-bg fw-bold rounded-pill'>Login / Register</button>
                         </Link>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 .main-header {
-    background-image: url("/background.png");
+    background-color: #0A131E;
     height: 100vh auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,10 +13,10 @@
 }
 
 .title-color {
-    color: #FFCB73;
+    color: #ed3030;
 }
 
 .btn-bg {
-    background-color: #FFCB73;
+    background-color: #ed3030;
     color: #0A131E;
 }
