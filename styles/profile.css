@@ -1,0 +1,10 @@
+.profile-card {
+    border-radius: 50px;
+    background: #0A131E;
+    box-shadow: 20px 20px 60px #09101a,
+        -20px -20px 60px #0c1623;
+}
+
+.info-color {
+    color: #ed3030;
+}

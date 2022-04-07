@@ -1,0 +1,22 @@
+.features-section {
+    background-color: #0A131E;
+}
+
+.features-heading {
+    color: #ed3030;
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.feature-box {
+    background: transparent;
+}
+
+.feature-title {
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.feature-title-color {
+    color: #ed3030
+}

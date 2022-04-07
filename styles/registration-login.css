@@ -1,0 +1,32 @@
+.registration-page {
+    background-color: #0A131E;
+    height: 100vh auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-page {
+    background-color: #0A131E;
+    height: 100vh auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rl-title {
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.rl-title-color {
+    color: #ed3030;
+}
+
+.redirect-text {
+    color: #ed3030;
+}
+
+.go-login {
+    cursor: pointer;
+}

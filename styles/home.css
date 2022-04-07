@@ -1,0 +1,22 @@
+.main-header {
+    background-color: #0A131E;
+    height: 100vh auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-title {
+    color: white;
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.title-color {
+    color: #ed3030;
+}
+
+.btn-bg {
+    background-color: #ed3030;
+    color: #0A131E;
+}
