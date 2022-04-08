@@ -3,7 +3,7 @@
 }
 
 .amount-box1 {
-    background-image: url("/amount1.jpg");
+    background-image: url("/amount1.png");
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
 }
 
 .amount-box2 {
-    background-image: url("/amount2.jpg");
+    background-image: url("/amount2.png");
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
 }
 
 .amount-box3 {
-    background-image: url("/amount3.jpg");
+    background-image: url("/amount3.png");
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,5 +34,5 @@
 }
 
 .dollar {
-    color: #0A131E;
+    color: #ed3030;
 }

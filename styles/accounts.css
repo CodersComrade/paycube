@@ -1,0 +1,15 @@
+.add-new {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bank-card {
+    background-color: #0A131E;
+    border-radius: 20px;
+}
+
+.bank-bg {
+    background-color: #0A131E;
+}

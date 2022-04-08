@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 3px solid #ed3030;
+    border-right: 2px solid #ed3030;
+    border-bottom: 2px solid #ed3030;
     border-radius: 50px;
     background: linear-gradient(145deg, #09111b, #0b1420);
     box-shadow: 20px 20px 60px #09101a,

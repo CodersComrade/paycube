@@ -20,7 +20,7 @@ const Sidenav = () => {
                                 <Link href="/profile"><span className="menu">Profile</span></Link>
                             </p>
                             <p className='sidenav-menu py-2 px-3 my-2 text-white'>
-                                <Link href="/accounts"><span className="menu">My Wallet</span></Link>
+                                <Link href="/accounts"><span className="menu">My Accounts</span></Link>
                             </p>
                             <p className='sidenav-menu py-2 px-3 my-2 text-white'>
                                 <Link href="/budgetplans"><span className="menu">My Plans</span></Link>
@@ -29,7 +29,7 @@ const Sidenav = () => {
                                 <Link href="/expensetracker"><span className="menu">Tracker</span></Link>
                             </p>
                             <p className='sidenav-menu py-2 px-3 my-2 text-white'>
-                                <Link href="/Analytics"><span className="menu">Analytics</span></Link>
+                                <Link href="/analytics"><span className="menu">Analytics</span></Link>
                             </p>
                         </div>
                     </div>
