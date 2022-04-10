@@ -6,17 +6,24 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg main-nav">
-                <div className="container-fluid">
-                    <Link className="navbar-brand" href="/"><h1 className='logo fw-bold'><span className='logo-color'>Pay</span>Cube</h1></Link>
-                    <div className='ms-auto'>
-                        {!user?.email && <Link href="/register">
-                            <button className='btn btn-bg fw-bold rounded-pill'>Login / Register</button>
-                        </Link>}
-                        {user?.email && <btn onClick={logOut} className="btn-bg m-2 fw-bold btn">Logout</btn>}
+            <div className="main-nav sticky-top">
+                <nav className="navbar navbar-expand-lg">
+                    <div className="container-fluid">
+                        <Link className="navbar-brand" href="/"><img src="/logo.png" className="img-fluid logo" alt="logo" /></Link>
+                        <div className='ms-auto'>
+                            {!user?.email && <>
+                                <Link href="/login">
+                                    <button className='btn btn-outline me-2 btn-bg fw-bold rounded-pill'>Sign In</button>
+                                </Link>
+                                <Link href="/register">
+                                    <button className='btn btn-bg fw-bold rounded-pill'>Sign Up</button>
+                                </Link>
+                            </>}
+                            {user?.email && <btn onClick={logOut} className="btn-bg m-2 fw-bold btn">Logout</btn>}
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </>
     );
 };

@@ -1,9 +1,11 @@
+.divider {
+    height: 3px;
+    background-color: #55428F;
+}
+
 .footer {
-    background-color: #0A131E;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #343030;
+    overflow: hidden;
 }
 
 .footer-items {
@@ -13,30 +15,39 @@
     align-items: center;
 }
 
-.divider {
-    height: 10px;
-    background-color: #ed3030;
-}
-
 .follow-us-title {
-    font-size: 2rem;
-    color: #ed3030;
-    overflow: hidden;
+    color: #FFFFFF;
 }
 
-.social-icons {
-    background-color: #ed3030;
-    width: 320px;
+.fu-color {
+    color: #55428F;
+}
+
+.subscribe-part {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 77% 88%, 75% 100%, 39% 87%, 0 87%);
 }
 
-.social-img {
-    width: 200px;
+.subscribe-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.input-box {
+    border-radius: 40px;
+    background: #FFFFFF;
+    box-shadow: inset 20px 20px 60px #d9d9d9,
+        inset -20px -20px 60px #ffffff;
 }
 
 .copyright {
     overflow: hidden;
+}
+
+.company-name {
+    color: #FFFFFF;
 }

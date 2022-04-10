@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
-
 .main-nav {
-    background-color: #0A131E;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 96px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 96px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 96px 0px rgba(0, 0, 0, 0.75);
 }
 
 .logo {
-    font-family: 'Rubik Moonrocks', cursive;
-    color: white;
+    width: 200px;
     overflow: hidden;
     cursor: pointer;
 }
 
-.logo-color {
-    color: #ed3030;
+@media (max-width: 575.98px) {
+    .logo {
+        width: 130px;
+    }
 }

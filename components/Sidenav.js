@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Sidenav = () => {
     return (
         <>
-            <div className='container-fluid mb-3'>
+            <div className='container-fluid my-3 sidenav'>
                 <div className='row g-3'>
                     <div className='col-md-12'>
                         <div className='sidenav-header m-2 p-3'>

@@ -3,13 +3,13 @@ const Subbanner = () => {
     return (
         <>
             <div className='container-fluid sub-banner'>
-                <div className='container mt-5'>
-                    <div className='row g-0'>
+                <div className='container py-5'>
+                    <div className='row g-4'>
                         <div className='col-md-4'>
-                            <div className="card card1 p-4">
+                            <div className="card card1 p-4 border-0">
                                 <div className="card-body">
                                     <p className="card-text text-muted">It’s good to have money and the things that money can buy, but it’s good, too, to check up once in a while and make sure that you haven’t lost the things that money can’t buy. </p>
-                                    <h6 className="text-white author-name">--George Lorimer</h6>
+                                    <h6 className="author-name">--George Lorimer</h6>
                                 </div>
                                 <img src="/card1.svg" className="card-img-bottom card1-img" alt="..." />
                             </div>
@@ -24,10 +24,10 @@ const Subbanner = () => {
                             </div>
                         </div>
                         <div className='col-md-4'>
-                            <div className="card card1 p-4">
+                            <div className="card card1 p-4 border-0">
                                 <div className="card-body">
                                     <p className="card-text text-muted">I love money. I love everything about it. I bought some pretty good stuff. Got me a $300 pair of socks. Got a fur sink. An electric dog polisher. A gasoline powered turtleneck sweater. And, of course, I bought some dumb stuff, too. </p>
-                                    <h6 className="text-white author-name">--Steve Martin</h6>
+                                    <h6 className="author-name">--Steve Martin</h6>
                                 </div>
                                 <img src="/card3.svg" className="card-img-bottom card1-img" alt="..." />
                             </div>
