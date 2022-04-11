@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Mainbanner = () => {
@@ -17,7 +18,13 @@ const Mainbanner = () => {
                             </div>
                         </div>
                         <div className='col-md-7'>
-                            <img src="/bannerimg.svg" className='img-fluid mt-4' alt='bannerImage' />
+                            <Image
+                                alt="banner"
+                                src="/bannerimg.svg"
+                                layout="responsive"
+                                width={700}
+                                height={475}
+                            />
                         </div>
                     </div>
                 </div>

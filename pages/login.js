@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { useState } from "react";
 import useAuth from "./hooks/useAuth";
 
@@ -23,18 +25,19 @@ const Login = () => {
 
   return (
     <>
+      <Navbar></Navbar>
       <div className="container-fluid login-page py-5  ">
         <div className="container">
           <div className="row g-3">
             <div className="col-md-6">
-              <h2 className="rl-title text-white mb-5">
+              <h2 className="rl-title fw-bold my-5">
                 Log In <span className="rl-title-color">Your Account</span>
               </h2>
               <form onSubmit={handleLoginSubmit} className="row g-3">
                 <div className="col-md-12">
                   <label
                     htmlFor="inputEmail4"
-                    className="form-label text-white"
+                    className="form-label text-dark"
                   >
                     Email
                   </label>
@@ -50,7 +53,7 @@ const Login = () => {
                 <div className="col-md-12">
                   <label
                     htmlFor="inputPassword4"
-                    className="form-label text-white"
+                    className="form-label text-dark"
                   >
                     Password
                   </label>
@@ -67,7 +70,7 @@ const Login = () => {
                   <button
                     variant="primary"
                     type="submit"
-                    className="mb-3 btn-bg btn fw-bold"
+                    className="mb-3 btn-bg btn fw-bold rounded-pill"
                   >
                     Login
                   </button>
@@ -76,7 +79,7 @@ const Login = () => {
                   <p className="redirect-text mt-2">
                     Do Not Have An Account?{" "}
                     <Link href="/register">
-                      <span className="text-white fw-bold go-login">
+                      <span className="fw-bold go-login">
                         Register Now
                       </span>
                     </Link>{" "}
@@ -96,6 +99,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };

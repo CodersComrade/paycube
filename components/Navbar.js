@@ -19,7 +19,12 @@ const Navbar = () => {
                                     <button className='btn btn-bg fw-bold rounded-pill'>Sign Up</button>
                                 </Link>
                             </>}
-                            {user?.email && <btn onClick={logOut} className="btn-bg m-2 fw-bold btn">Logout</btn>}
+                            {user?.email && <>
+                                <Link href="/dashboard">
+                                    <button className='btn btn-outline me-2 btn-bg fw-bold rounded-pill'>Dashboard</button>
+                                </Link>
+                                <btn onClick={logOut} className="btn-bg m-2 fw-bold btn rounded-pill">Logout</btn>
+                            </>}
                         </div>
                     </div>
                 </nav>

@@ -1,3 +1,4 @@
+import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 
 const Analytics = () => {
@@ -8,8 +9,8 @@ const Analytics = () => {
                     <div className="col-md-2">
                         <Sidenav></Sidenav>
                     </div>
-                    <div className="col-md-10 dashboard bg-dark">
-
+                    <div className="col-md-10 dashboard">
+                        <Dashboardnav></Dashboardnav>
                     </div>
                 </div>
             </div>

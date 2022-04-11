@@ -1,3 +1,4 @@
+import Image from 'next/Image'
 
 const Subbanner = () => {
     return (
@@ -11,12 +12,24 @@ const Subbanner = () => {
                                     <p className="card-text text-muted">It’s good to have money and the things that money can buy, but it’s good, too, to check up once in a while and make sure that you haven’t lost the things that money can’t buy. </p>
                                     <h6 className="author-name">--George Lorimer</h6>
                                 </div>
-                                <img src="/card1.svg" className="card-img-bottom card1-img" alt="..." />
+                                <Image
+                                    alt="card1"
+                                    src="/card1.svg"
+                                    layout="responsive"
+                                    width={600}
+                                    height={475}
+                                />
                             </div>
                         </div>
                         <div className='col-md-4'>
                             <div className="card card2 p-4 rounded-3">
-                                <img src="/card2.svg" className="card-img-top" alt="..." />
+                                <Image
+                                    alt="card2"
+                                    src="/card2.svg"
+                                    layout="responsive"
+                                    width={600}
+                                    height={475}
+                                />
                                 <div className="card-body">
                                     <p className="card-text">You can only become truly accomplished at something you love. Don’t make money your goal. Instead, pursue the things you love doing, and then do them so well that people can’t take their eyes off you. </p>
                                     <h6 className="text-white author-name">--Maya Angelou</h6>
@@ -29,7 +42,13 @@ const Subbanner = () => {
                                     <p className="card-text text-muted">I love money. I love everything about it. I bought some pretty good stuff. Got me a $300 pair of socks. Got a fur sink. An electric dog polisher. A gasoline powered turtleneck sweater. And, of course, I bought some dumb stuff, too. </p>
                                     <h6 className="author-name">--Steve Martin</h6>
                                 </div>
-                                <img src="/card3.svg" className="card-img-bottom card1-img" alt="..." />
+                                <Image
+                                    alt="card3"
+                                    src="/card3.svg"
+                                    layout="responsive"
+                                    width={600}
+                                    height={475}
+                                />
                             </div>
                         </div>
                     </div>

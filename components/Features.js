@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 const Features = () => {
     return (
@@ -7,7 +8,13 @@ const Features = () => {
                     <div className="card mb-3 feature-box container py-5 border-0">
                         <div className="row g-5">
                             <div className="col-md-7">
-                                <img src="/feature1.svg" className="img-fluid rounded-start" alt="..." />
+                                <Image
+                                    alt="Mountains"
+                                    src="/feature1.svg"
+                                    layout="responsive"
+                                    width={700}
+                                    height={475}
+                                />
                             </div>
                             <div className="col-md-5">
                                 <div className="card-body">
@@ -34,7 +41,13 @@ const Features = () => {
                                 </div>
                             </div>
                             <div className="col-md-7">
-                                <img src="/feature2.svg" className="img-fluid rounded-start" alt="..." />
+                                <Image
+                                    alt="Mountains"
+                                    src="/feature2.svg"
+                                    layout="responsive"
+                                    width={700}
+                                    height={475}
+                                />
                             </div>
                         </div>
                     </div>
@@ -43,7 +56,13 @@ const Features = () => {
                     <div className="card mb-3 feature-box my-5 py-5 container border-0">
                         <div className="row g-5">
                             <div className="col-md-7">
-                                <img src="/feature3.svg" className="img-fluid rounded-start" alt="..." />
+                                <Image
+                                    alt="Mountains"
+                                    src="/feature3.svg"
+                                    layout="responsive"
+                                    width={700}
+                                    height={475}
+                                />
                             </div>
                             <div className="col-md-5">
                                 <div className="card-body">

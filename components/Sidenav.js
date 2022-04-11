@@ -3,36 +3,39 @@ import Link from 'next/link'
 const Sidenav = () => {
     return (
         <>
-            <div className='container-fluid my-3 sidenav'>
-                <div className='row g-3'>
-                    <div className='col-md-12'>
-                        <div className='sidenav-header m-2 p-3'>
-                            <img src='profile.svg' className='img-fluid my-3' alt='profilepic' />
-                            <p className='id-name fs-4 fw-bold'>Arfin Priom</p>
+            <div className='container-fluid p-3 sidenav sticky-top'>
+                <Link className="navbar-brand" href="/"><img src="/logo.png" className="img-fluid logo" alt="logo" /></Link>
+                <hr />
+                <div className='identity'>
+                    <div className='row'>
+                        <div className='col-md-4'>
+                            <img src="/profile.svg" className="img-fluid profile-pic" alt="profile-pic" />
+                        </div>
+                        <div className='col-md-8'>
+                            <p className='fw-bold id-name'>Arfin Priom</p>
                         </div>
                     </div>
-                    <div className='col-md-12'>
-                        <div className='sidenav-items m-2 p-3'>
-                            <p className='sidenav-menu py-2 px-3 my-2 text-white'>
-                                <Link href="/dashboard" className="menu"><span className="menu">Dashboard</span></Link>
-                            </p>
-                            <p className='sidenav-menu py-2 px-3 my-2 text-white'>
-                                <Link href="/profile"><span className="menu">Profile</span></Link>
-                            </p>
-                            <p className='sidenav-menu py-2 px-3 my-2 text-white'>
-                                <Link href="/accounts"><span className="menu">My Accounts</span></Link>
-                            </p>
-                            <p className='sidenav-menu py-2 px-3 my-2 text-white'>
-                                <Link href="/budgetplans"><span className="menu">My Plans</span></Link>
-                            </p>
-                            <p className='sidenav-menu py-2 px-3 my-2 text-white'>
-                                <Link href="/expensetracker"><span className="menu">Tracker</span></Link>
-                            </p>
-                            <p className='sidenav-menu py-2 px-3 my-2 text-white'>
-                                <Link href="/analytics"><span className="menu">Analytics</span></Link>
-                            </p>
-                        </div>
-                    </div>
+                </div>
+                <hr />
+                <div className='sidenav-items mt-4'>
+                    <p className='menu'>
+                        <Link href="/dashboard"><span>Dashboard</span></Link>
+                    </p>
+                    <p className='menu'>
+                        <Link href="/profile"><span>Profile</span></Link>
+                    </p>
+                    <p className='menu'>
+                        <Link href="/accounts"><span>Add Money</span></Link>
+                    </p>
+                    <p className='menu'>
+                        <Link href="/budgetplans"><span>Budget Plans</span></Link>
+                    </p>
+                    <p className='menu'>
+                        <Link href="/expensetracker"><span>expensetracker</span></Link>
+                    </p>
+                    <p className='menu'>
+                        <Link href="/analytics"><span>Analytics</span></Link>
+                    </p>
                 </div>
             </div>
         </>

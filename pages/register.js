@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { useState } from "react";
 import useAuth from "./hooks/useAuth";
 import useFirebase from "./hooks/useFirebase";
@@ -29,6 +31,7 @@ const Register = () => {
 
   return (
     <>
+      <Navbar></Navbar>
       <div className="container-fluid registration-page py-5  ">
         <div className="container">
           <div className="row g-3">
@@ -36,14 +39,14 @@ const Register = () => {
               <img src="register.svg" className="img-fluid" alt="register" />
             </div>
             <div className="col-md-6">
-              <h2 className="rl-title text-white mb-5">
+              <h2 className="rl-title mb-5">
                 Sign Up <span className="rl-title-color">For Free</span>
               </h2>
               <form onSubmit={handleLoginSubmit} className="row g-3">
                 <div className="col-md-12">
                   <label
                     htmlFor="inputEmail4"
-                    className="form-label text-white"
+                    className="form-label text-dark"
                   >
                     Email
                   </label>
@@ -60,7 +63,7 @@ const Register = () => {
                 <div className="col-md-12">
                   <label
                     htmlFor="inputPassword4"
-                    className="form-label text-white"
+                    className="form-label text-dark"
                   >
                     Password
                   </label>
@@ -77,7 +80,7 @@ const Register = () => {
                 <div className="col-md-12">
                   <label
                     htmlFor="inputConfirmPassword4"
-                    className="form-label text-white"
+                    className="form-label text-dark"
                   >
                     Confirm Password
                   </label>
@@ -95,14 +98,14 @@ const Register = () => {
                   <button
                     variant="primary"
                     type="submit"
-                    className="mb-3 btn-bg btn fw-bold"
+                    className="mb-3 btn-bg btn fw-bold rounded-pill"
                   >
                     Register
                   </button>
                 </div>
                 <div className="col-md-6">
                   <btn
-                    className="btn-bg fw-bold btn"
+                    className="btn-bg fw-bold btn rounded-pill"
                     onClick={signInUsingGoogle}
                   >
                     Google
@@ -112,7 +115,7 @@ const Register = () => {
                   <p className="redirect-text">
                     Already Have An Account?{" "}
                     <Link href="/login">
-                      <span className="text-white fw-bold go-login">
+                      <span className="fw-bold go-login">
                         Login Now
                       </span>
                     </Link>{" "}
@@ -134,6 +137,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };
