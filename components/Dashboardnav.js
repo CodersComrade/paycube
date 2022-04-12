@@ -4,7 +4,7 @@ const Dashboardnav = () => {
     const { user, logOut } = useAuth();
     return (
         <>
-            <div className="container-fluid ps-5 bg-white sticky-top">
+            <div className="container-fluid ps-5 bg-white dashboard-nav sticky-top">
                 <nav className="navbar navbar-light additional-nav">
                     <div className="container-fluid">
                         <form className="d-flex">

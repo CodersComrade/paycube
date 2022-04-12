@@ -2,7 +2,7 @@ import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 import Mobilenav from '../components/Mobilenav';
 
-const Dashboard = () => {
+const Merchant = () => {
     return (
         <>
             <Mobilenav></Mobilenav>
@@ -20,4 +20,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default Merchant;

@@ -15,6 +15,7 @@ import '../styles/accounts.css'
 import '../styles/budgetplans.css'
 import '../styles/expensetracker.css'
 import '../styles/analytics.css'
+import '../styles/nav.css'
 
 import Head from 'next/head'
 import Script from 'next/script'

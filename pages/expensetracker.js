@@ -1,9 +1,11 @@
 import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
+import Mobilenav from '../components/Mobilenav';
 
 const Expensetracker = () => {
     return (
         <>
+            <Mobilenav></Mobilenav>
             <div className="container-fluid dashboard">
                 <div className="row g-0">
                     <div className="col-md-2">
