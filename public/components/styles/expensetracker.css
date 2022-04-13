@@ -1,0 +1,17 @@
+.tracker-box1 {
+    background-image: url("/budgetbanner.png");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+.tracker-box2 {
+    background-image: url("/expensebanner.png");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}

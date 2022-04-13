@@ -1,0 +1,38 @@
+.dashboard {
+    background-color: #FFFFFF;
+}
+
+.amount-box1 {
+    background-image: url("/amount1.png");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+.amount-box2 {
+    background-image: url("/amount2.png");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+.amount-box3 {
+    background-image: url("/amount3.png");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+.amount-header {
+    color: white;
+}
+
+.dollar {
+    color: #ed3030;
+}
