@@ -19,7 +19,7 @@ import '../styles/nav.css'
 
 import Head from 'next/head'
 import Script from 'next/script'
-import AuthProvider from './context/AuthProvider'
+import AuthProvider from '../components/context/AuthProvider'
 
 function MyApp({ Component, pageProps }) {
   return <>

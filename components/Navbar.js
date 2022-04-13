@@ -1,5 +1,5 @@
 import Link from "next/link";
-import useAuth from "../pages/hooks/useAuth";
+import useAuth from "./hooks/useAuth";
 
 const Navbar = () => {
     const { user, logOut } = useAuth();
