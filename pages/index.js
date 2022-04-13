@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import App from '../components/app'
+import App from '../components/App'
 import Features from '../components/Features'
 import Mainbanner from '../components/Mainbanner'
 import Subbanner from '../components/Subbanner'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Brands from '../components/brands'
+import Brands from '../components/Brands'
 
 export default function Home() {
   return (
