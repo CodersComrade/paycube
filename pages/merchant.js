@@ -8,8 +8,8 @@ const Merchant = () => {
   // const { register, handleSubmit } = useForm();
   const [businessName, setBusinessName] = useState("");
   const [businessLogo, setBusinessLogo] = useState(null);
-  const [marchentPhone, setMarchentPhone] = useState("");
-  const [marchentNid, setMarchentNid] = useState("");
+  const [merchantPhone, setMerchantPhone] = useState("");
+  const [merchantNid, setMerchantNid] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,16 +17,19 @@ const Merchant = () => {
 
     formData.append("businessName", businessName);
     formData.append("businessLogo", businessLogo);
-    formData.append("marchentPhone", marchentPhone);
-    formData.append("marchentNid", marchentNid);
+    formData.append("merchantPhone", merchantPhone);
+    formData.append("merchantNid", merchantNid);
 
-    fetch("http://localhost:5000/marchents", {
+    fetch("http://localhost:5000/merchants", {
       method: "POST",
       body: formData,
     })
       .then((res) => res.json())
       .then((data) => {
         console.log("Success:", data);
+        if (data.insertedId) {
+            alert("success")
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -64,14 +67,14 @@ const Merchant = () => {
                 <br />
                 <h6>Phone Number </h6>
                 <input
-                  onChange={(e) => setMarchentPhone(e.target.value)}
+                  onChange={(e) => setMerchantPhone(e.target.value)}
                   required
                   type="number"
                 />
                 <br />
-                <h6>Marchent NID</h6>
+                <h6>Merchant NID</h6>
                 <input
-                  onChange={(e) => setMarchentNid(e.target.value)}
+                  onChange={(e) => setMerchantNid(e.target.value)}
                   required
                   type="number"
                 />
