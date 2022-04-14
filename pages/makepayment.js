@@ -2,7 +2,7 @@ import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 import Mobilenav from '../components/Mobilenav';
 
-const Accounts = () => {
+const Makepayments = () => {
     return (
         <>
             <Mobilenav></Mobilenav>
@@ -15,7 +15,7 @@ const Accounts = () => {
                         <Dashboardnav></Dashboardnav>
                         <div className="modal-btn">
                             <button type="button" className="btn btn-bg rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Add New Account
+                                Make Payment
                             </button>
                         </div>
 
@@ -24,7 +24,7 @@ const Accounts = () => {
                             <div className="modal-dialog">
                                 <div className="modal-content">
                                     <div className="modal-header">
-                                        <h5 className="modal-title" id="exampleModalLabel">Add Your Bank Account</h5>
+                                        <h5 className="modal-title" id="exampleModalLabel">Choose</h5>
                                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div className="modal-body">
@@ -43,4 +43,4 @@ const Accounts = () => {
     );
 };
 
-export default Accounts;
+export default Makepayments;

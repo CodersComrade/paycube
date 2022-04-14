@@ -21,7 +21,10 @@ const Mobilenav = () => {
                                     <Link href="/profile"><span>Profile</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
-                                    <Link href="/accounts"><span>Add Money</span></Link>
+                                    <Link href="/accounts"><span>My Wallet</span></Link>
+                                </li>
+                                <li className="nav-item menu m-1">
+                                    <Link href="/makepayment"><span>Make Payment</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
                                     <Link href="/budgetplans"><span>Budget Plans</span></Link>

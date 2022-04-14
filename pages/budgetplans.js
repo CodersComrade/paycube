@@ -14,7 +14,7 @@ const Budgetplans = () => {
     const [budget, setBudget] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/getBudget')
+        fetch('https://fierce-chamber-90534.herokuapp.com/getBudget')
             .then(res => res.json())
             .then(data => setBudget(data))
     }, [])
@@ -22,7 +22,7 @@ const Budgetplans = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/budget', data).then(res => {
+        axios.post('https://fierce-chamber-90534.herokuapp.com/budget', data).then(res => {
             if (res.data.insertedId) {
                 handleClose();
                 alert('added successfully');
@@ -40,13 +40,7 @@ const Budgetplans = () => {
                     </div>
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
-                        <div className="col-md-10 dashboard">
-                            <div className="row">
-                                {
-                                    budget.map(data => <BudgetCard key={data._id} budget={data}></BudgetCard>)
-                                }
-                            </div>
-
+                        <div className="container">
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <button className='btn btn-bg fw-bold px-4 py-2 text-capitalize rounded-pill mx-auto my-3' onClick={handleShow}> Make New Budget</button>
                             </div>
@@ -85,15 +79,20 @@ const Budgetplans = () => {
                                             padding: '10px',
                                         }}
                                         className="mt-2 w-100"
-                                        placeholder="write why you create this budget"
+                                        placeholder="Write a note about your budget plan"
                                         {...register('description', { required: true })}
                                     />
 
                                     <input className="btn btn-bg rounded-pill fw-bold w-50 mx-auto " type="submit" value='create' />
                                 </form>
                             </Modal>
-
-
+                            <div className="container mt-5">
+                                <div className="row">
+                                    {
+                                        budget.map(data => <BudgetCard key={data._id} budget={data}></BudgetCard>)
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

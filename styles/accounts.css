@@ -13,3 +13,10 @@
 .bank-bg {
     background-color: #0A131E;
 }
+
+.modal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
