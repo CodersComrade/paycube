@@ -8,8 +8,9 @@ import { useState, useEffect } from "react";
 const Approve = () => {
   const [merchants, setMerchant] = useState([]);
 
+
   useEffect(() => {
-    fetch('http://localhost:5000/merchants')
+    fetch('https://stormy-fortress-30009.herokuapp.com/merchants')
     .then(res => res.json())
     .then(data=>setMerchant(data))
   
@@ -30,7 +31,9 @@ const Approve = () => {
               <h1>Approve{merchants.length}</h1>
               {
                 merchants.map(merchant=>
-                <div>
+                <div
+                key={merchant._id}
+                >
                 <p>  {merchant.businessName}</p>
                 <img style={{width: '200px'}} src={`data:image/png;base64,${merchant.businessLogo}`}></img>
                 <p>Phone: {merchant.merchantPhone}</p>
