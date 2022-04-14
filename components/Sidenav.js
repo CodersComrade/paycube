@@ -6,7 +6,7 @@ const Sidenav = () => {
             <div className='container-fluid p-3 sidenav sticky-top'>
                 <Link className="navbar-brand" href="/"><img src="/logo.png" className="img-fluid logo" alt="logo" /></Link>
                 <hr />
-                <div className='identity'>
+                <div className='identity py-2'>
                     <div className='row'>
                         <div className='col-md-4'>
                             <img src="/profile.svg" className="img-fluid profile-pic" alt="profile-pic" />
