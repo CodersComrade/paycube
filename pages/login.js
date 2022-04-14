@@ -2,7 +2,7 @@ import Link from "next/link";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useState } from "react";
-import useAuth from "./hooks/useAuth";
+import useAuth from "../components/hooks/useAuth";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
