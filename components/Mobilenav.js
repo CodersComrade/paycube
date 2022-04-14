@@ -14,7 +14,7 @@ const Mobilenav = () => {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li className="nav-item menu m-1">
+                                <li className="nav-item menu mt-2 m-1">
                                     <Link href="/dashboard"><span>Dashboard</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">

@@ -4,7 +4,7 @@ const Sidenav = () => {
     return (
         <>
             <div className='container-fluid p-3 sidenav sticky-top'>
-                <Link className="navbar-brand" href="/"><img src="/logo.png" className="img-fluid logo" alt="logo" /></Link>
+                <Link className="navbar-brand" href="/"><img src="/logo.png" className="img-fluid logo mb-2" alt="logo" /></Link>
                 <hr />
                 <div className='identity py-2'>
                     <div className='row'>
