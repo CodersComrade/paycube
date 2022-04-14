@@ -18,9 +18,12 @@ import '../styles/expensetracker.css'
 import '../styles/analytics.css'
 import '../styles/nav.css'
 
+
 import Head from 'next/head'
 import Script from 'next/script'
 import AuthProvider from '../components/context/AuthProvider'
+
+
 
 function MyApp({ Component, pageProps }) {
   return <>
