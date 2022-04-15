@@ -30,7 +30,7 @@ const Mobilenav = () => {
                                     <Link href="/budgetplans"><span>Budget Plans</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
-                                    <Link href="/expensetracker"><span>expensetracker</span></Link>
+                                    <Link href="/expensetracker"><span>Expense Tracker</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
                                     <Link href="/analytics"><span>Analytics</span></Link>

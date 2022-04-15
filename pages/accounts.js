@@ -1,6 +1,9 @@
+import Link from "next/link";
+
 import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 import Mobilenav from '../components/Mobilenav';
+import Barchart from "../components/Barchart";
 
 const Accounts = () => {
     return (
@@ -13,29 +16,10 @@ const Accounts = () => {
                     </div>
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
-                        <div className="modal-btn">
-                            <button type="button" className="btn btn-bg rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Add New Account
-                            </button>
+                        <div className="add-btn">
+                            <Link href='https://lit-lowlands-64850.herokuapp.com/' target="_blank"><button type="button" className="btn btn-bg rounded-pill">Add New Account</button></Link>
                         </div>
-
-
-                        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div className="modal-dialog">
-                                <div className="modal-content">
-                                    <div className="modal-header">
-                                        <h5 className="modal-title" id="exampleModalLabel">Add Your Bank Account</h5>
-                                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div className="modal-body">
-                                        ...
-                                    </div>
-                                    <div className="modal-footer">
-                                        <button type="button" className="btn btn-bg rounded-pill" data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Barchart></Barchart>
                     </div>
                 </div>
             </div>

@@ -14,9 +14,10 @@
     background-color: #0A131E;
 }
 
-.modal-btn {
+.add-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 50px;
 }

@@ -34,7 +34,7 @@ const Sidenav = () => {
                         <Link href="/budgetplans"><span>Budget Plans</span></Link>
                     </p>
                     <p className='menu'>
-                        <Link href="/expensetracker"><span>expensetracker</span></Link>
+                        <Link href="/expensetracker"><span>Expense Tracker</span></Link>
                     </p>
                     <p className='menu'>
                         <Link href="/analytics"><span>Analytics</span></Link>

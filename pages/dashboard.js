@@ -1,6 +1,7 @@
 import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 import Mobilenav from '../components/Mobilenav';
+import Linechart from "../components/Linechart";
 
 const Dashboard = () => {
     return (
@@ -13,6 +14,7 @@ const Dashboard = () => {
                     </div>
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
+                        <Linechart></Linechart>
                     </div>
                 </div>
             </div>

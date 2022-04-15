@@ -13,7 +13,7 @@ const Makepayments = () => {
                     </div>
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
-                        <div className="modal-btn">
+                        <div className="add-btn">
                             <button type="button" className="btn btn-bg rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Make Payment
                             </button>
