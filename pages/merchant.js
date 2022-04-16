@@ -21,7 +21,7 @@ const Merchant = () => {
     formData.append('marchentPhone', marchentPhone)
     formData.append('merchantNid', marchentNid)
 
-    fetch('http://localhost:5000/marchents', {
+    fetch('https://stormy-fortress-30009.herokuapp.com/marchents', {
       method: 'POST',
       body: formData
     })
