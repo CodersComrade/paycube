@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import useAuth from './hooks/useAuth';
 
 const Sidenav = () => {
+    const { user } = useAuth();
     return (
         <>
             <div className='container-fluid p-3 sidenav sticky-top'>
@@ -9,10 +11,10 @@ const Sidenav = () => {
                 <div className='identity py-2'>
                     <div className='row'>
                         <div className='col-md-4'>
-                            <img src="/profile.svg" className="img-fluid profile-pic" alt="profile-pic" />
+                            <img src={user.photoURL} className="img-fluid profile-pic" alt="profile-pic" />
                         </div>
                         <div className='col-md-8'>
-                            <p className='fw-bold id-name'>Arfin Priom</p>
+                            <p className='fw-bold id-name'>{user.displayName}</p>
                         </div>
                     </div>
                 </div>
