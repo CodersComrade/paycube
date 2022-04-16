@@ -8,7 +8,7 @@ const CreateNewAcc = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/accounts', data).then(res => {
+        axios.post('https://fierce-chamber-90534.herokuapp.com/accounts', data).then(res => {
             if (res.data.insertedId) {
                 alert('added successfully');
                 reset();

@@ -14,12 +14,12 @@ const AddMoneyModal = ({ account }) => {
         data.accountName = account.name;
         console.log(data);
         reset();
-        // axios.post('http://localhost:5000/addedMoney', data).then(res => {
-        //     if (res.data.insertedId) {
-        //         alert('added successfully');
-        //         reset();
-        //     }
-        // });
+        axios.post('https://fierce-chamber-90534.herokuapp.com/addedMoney', data).then(res => {
+            if (res.data.insertedId) {
+                alert('added successfully');
+                reset();
+            }
+        });
     };
     return (
         <div className="modal-dialog">

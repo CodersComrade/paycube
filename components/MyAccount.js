@@ -6,7 +6,7 @@ const MyAccount = () => {
     const [accounts, setAccounts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/getAccounts')
+        fetch('https://fierce-chamber-90534.herokuapp.com/getAccounts')
             .then(res => res.json())
             .then(data => setAccounts(data.reverse()));
     },[])
