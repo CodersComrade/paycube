@@ -6,11 +6,27 @@
 }
 
 .merchant-title {
-    color: #55428F;
+    color: #343030;
     font-size: 2rem;
+}
+
+.merchant-title-color {
+    color: #55428F;
 }
 
 .label {
     font-size: 20px;
     color: #343030;
+}
+
+.approve-box {
+    border-radius: 50px;
+    background: #FFFFFF;
+    box-shadow: inset -20px 20px 60px #d9d9d9,
+        inset 20px -20px 60px #ffffff;
+}
+
+.approve-img {
+    width: 100px;
+    height: 100px;
 }

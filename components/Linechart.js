@@ -13,45 +13,45 @@ import {
 
 const data = [
     {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
+        name: 'January',
+        Transaction: 4000,
+        CashIn: 2400,
         amt: 2400,
     },
     {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
+        name: 'February',
+        Transaction: 3000,
+        CashIn: 1398,
         amt: 2210,
     },
     {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
+        name: 'March',
+        Transaction: 2000,
+        CashIn: 9800,
         amt: 2290,
     },
     {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
+        name: 'April',
+        Transaction: 2780,
+        CashIn: 3908,
         amt: 2000,
     },
     {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
+        name: 'May',
+        Transaction: 1890,
+        CashIn: 4800,
         amt: 2181,
     },
     {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
+        name: 'June',
+        Transaction: 2390,
+        CashIn: 3800,
         amt: 2500,
     },
     {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
+        name: 'July',
+        Transaction: 3490,
+        CashIn: 4300,
         amt: 2100,
     },
 ];
@@ -68,8 +68,8 @@ export default class Example extends PureComponent {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="pv" stroke="#55428F" activeDot={{ r: 8 }} />
-                    <Line type="monotone" dataKey="uv" stroke="#343030" />
+                    <Line type="monotone" dataKey="Transaction" stroke="#55428F" activeDot={{ r: 8 }} />
+                    <Line type="monotone" dataKey="CashIn" stroke="#343030" />
                 </LineChart>
             </ResponsiveContainer>
         );

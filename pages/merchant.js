@@ -9,6 +9,7 @@ const Merchant = () => {
   const [businessName, setBusinessName] = useState('');
   const [businessLogo, setBusinessLogo] = useState(null);
   const [marchentPhone, setMarchentPhone] = useState('');
+  const [marchentNid, setMarchentNid] = useState('');
 
 
   const handleSubmit = e => {
@@ -18,6 +19,7 @@ const Merchant = () => {
     formData.append('businessName', businessName)
     formData.append('businessLogo', businessLogo)
     formData.append('marchentPhone', marchentPhone)
+    formData.append('merchantNid', marchentNid)
 
     fetch('http://localhost:5000/marchents', {
       method: 'POST',
@@ -47,35 +49,40 @@ const Merchant = () => {
           </div>
           <div className="col-md-10 dashboard">
             <Dashboardnav></Dashboardnav>
-            <div className="text-center">
-              <h1>Merchant Register</h1>
+            <div className="card border-0 merchant-form p-5 mt-3">
+              <h1 className="merchant-title mb-3 fw-bold">Merchant Register</h1>
               <form onSubmit={handleSubmit}>
-                <h6>Name of Business </h6>
+                <h6 className="label mb-3">Name of Business </h6>
                 <input
                   type="text"
                   onChange={e => setBusinessName(e.target.value)}
-
+                  className="input-box border-0 p-2"
                 />{" "}
                 <br />
-                <h6>Upload Company logo </h6>
+                <h6 className="label my-3">Upload Company logo </h6>
                 <input
                   accept="image/*"
                   multiple
                   type="file"
                   onChange={e => setBusinessLogo(e.target.files[0])}
-
-
+                  className="input-box border-0 p-2"
                 />
                 <br />
-                <h6>Phone Number </h6>
+                <h6 className="label my-3">Phone Number </h6>
                 <input
                   onChange={e => setMarchentPhone(e.target.value)}
-
                   type="number"
-
+                  className="input-box border-0 p-2"
                 />
                 <br />
-                <input type="submit" />
+                <h6 className="label my-3">NID No </h6>
+                <input
+                  onChange={e => setMarchentNid(e.target.value)}
+                  type="number"
+                  className="input-box border-0 p-2"
+                />
+                <br />
+                <input type="submit" className="btn-bg fw-bold btn rounded-pill mt-3" />
               </form>
             </div>
           </div>

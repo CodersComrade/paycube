@@ -22,7 +22,7 @@ const Approve = () => {
 
   const onSubmit = (data, e) => {
     console.log(data);
-    fetch(`http://localhost:5000/merchants/${merchantsId}`, {
+    fetch(`https://stormy-fortress-30009.herokuapp.com/merchants/${merchantsId}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -43,28 +43,53 @@ const Approve = () => {
           <div className="col-md-10 dashboard">
             <Dashboardnav></Dashboardnav>
             <div>
-              <h1>Approve{merchants.length}</h1>
-              {merchants.map((merchant) => (
-                <div key={merchant._id}>
-                  <p> {merchant.businessName}</p>
-                  <img
-                    style={{ width: "200px" }}
-                    src={`data:image/png;base64,${merchant.businessLogo}`}
-                  ></img>
-                  <p>Phone: {merchant.merchantPhone}</p>
-                  <p>Nid: {merchant.merchantNid}</p>
-                  {
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                      <input
-                        onClick={() => handleUpdate(merchant?._id)}
-                        {...register("merchants")}
-                        type="submit"
-                        value="approve"
-                      />
-                    </form>
-                  }
-                </div>
-              ))}
+              <h1 className="merchant-title fw-bold my-4 ms-3">Approve Request: <span className="merchant-title-color">{merchants.length}</span></h1>
+              <div className="container">
+                {merchants.map((merchant) => (
+                  <>
+
+                    <table className="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Logo</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Phone No</th>
+                          <th scope="col">Nid No</th>
+                          <th scope="col">Approve</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" key={merchant._id}>{merchant._id}</th>
+                          <td>
+                            <img
+                              className="img-fluid approve-img"
+                              src={`data:image/png;base64,${merchant.businessLogo}`}
+                            ></img>
+                          </td>
+                          <td>{merchant.businessName}</td>
+                          <td>{merchant.merchantPhone}</td>
+                          <td>{merchant.merchantNid}</td>
+                          <td>
+                            {
+                              <form onSubmit={handleSubmit(onSubmit)}>
+                                <input
+                                  onClick={() => handleUpdate(merchant?._id)}
+                                  {...register("merchants")}
+                                  type="submit"
+                                  value="approve"
+                                  className="btn-bg fw-bold btn rounded-pill"
+                                />
+                              </form>
+                            }
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </>
+                ))}
+              </div>
             </div>
           </div>
         </div>
