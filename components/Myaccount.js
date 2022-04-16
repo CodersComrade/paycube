@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CreateNewAcc from './CreateNewAcc';
 import SingleAcc from './SingleAcc';
 
-const Myaccount = () => {
+const MyAccount = () => {
     const [accounts, setAccounts] = useState([]);
 
     useEffect(() => {
@@ -34,4 +34,4 @@ const Myaccount = () => {
     );
 };
 
-export default Myaccount;
+export default MyAccount;
