@@ -16,6 +16,7 @@ import '../styles/budgetplans.css'
 import '../styles/budgetcard.css'
 import '../styles/expensetracker.css'
 import '../styles/analytics.css'
+import '../styles/merchant.css'
 import '../styles/nav.css'
 
 

@@ -2,37 +2,27 @@
     background-color: #FFFFFF;
 }
 
-.amount-box1 {
-    background-image: url("/amount1.png");
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
+.amount-box {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 20px 20px 60px #d9d9d9,
+        -20px -20px 60px #ffffff;
 }
 
 .amount-box2 {
-    background-image: url("/amount2.png");
-    width: 100%;
+    background-image: url("/balance.png");
+    height: 100vh auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: none;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.amount-box3 {
-    background-image: url("/amount3.png");
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
+.amount-title {
+    font-size: 20px;
 }
 
-.amount-header {
-    color: white;
-}
-
-.dollar {
-    color: #ed3030;
+.amount {
+    font-size: 3rem;
 }

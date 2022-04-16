@@ -28,7 +28,7 @@ const Merchant = () => {
       .then((data) => {
         console.log("Success:", data);
         if (data.insertedId) {
-            alert("success")
+          alert("success")
         }
       })
       .catch((error) => {
@@ -48,38 +48,42 @@ const Merchant = () => {
           </div>
           <div className="col-md-10 dashboard">
             <Dashboardnav></Dashboardnav>
-            <div className="text-center">
-              <h1>Merchant Register</h1>
+            <div className="card mt-3 p-5 merchant-form border-0">
+              <h1 className="merchant-title fw-bold mb-4">Merchant Register</h1>
               <form onSubmit={handleSubmit}>
-                <h6>Name of Business </h6>
+                <h4 className="label my-2">Name of Business </h4>
                 <input
                   type="text"
+                  className="input-box border-0 p-2"
                   onChange={(e) => setBusinessName(e.target.value)}
                 />{" "}
                 <br />
-                <h6>Upload Company logo </h6>
+                <h4 className="label mt-3 mb-2">Upload Company logo </h4>
                 <input
                   accept="image/*"
                   multiple
                   type="file"
                   onChange={(e) => setBusinessLogo(e.target.files[0])}
+                  className="input-box border-0 p-2"
                 />
                 <br />
-                <h6>Phone Number </h6>
+                <h4 className="label mt-3 mb-2">Phone Number </h4>
                 <input
                   onChange={(e) => setMerchantPhone(e.target.value)}
                   required
                   type="number"
+                  className="input-box border-0 p-2"
                 />
                 <br />
-                <h6>Merchant NID</h6>
+                <h4 className="label mt-3 mb-2">Merchant NID</h4>
                 <input
                   onChange={(e) => setMerchantNid(e.target.value)}
                   required
                   type="number"
+                  className="input-box border-0 p-2"
                 />
                 <br />
-                <input type="submit" />
+                <input type="submit" className="btn-bg fw-bold btn rounded-pill mt-3" />
               </form>
             </div>
           </div>
