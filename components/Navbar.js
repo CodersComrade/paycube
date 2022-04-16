@@ -1,18 +1,34 @@
 import Link from "next/link";
+import useAuth from "./hooks/useAuth";
 
 const Navbar = () => {
+    const { user, logOut } = useAuth();
+
     return (
         <>
-            <nav className="navbar navbar-expand-lg main-nav">
-                <div className="container-fluid">
-                    <Link className="navbar-brand" href="/"><h1 className='logo fw-bold'><span className='logo-color'>Pay</span>Cube</h1></Link>
-                    <div className='ms-auto'>
-                        <Link href="/register">
-                            <button className='btn btn-bg fw-bold'>Login / Register</button>
-                        </Link>
+            <div className="main-nav sticky-top">
+                <nav className="navbar navbar-expand-lg">
+                    <div className="container-fluid">
+                        <Link className="navbar-brand" href="/"><img src="/logo.png" className="img-fluid logo" alt="logo" /></Link>
+                        <div className='ms-auto'>
+                            {!user?.email && <>
+                                <Link href="/login">
+                                    <button className='btn btn-outline me-2 btn-bg fw-bold rounded-pill'>Sign In</button>
+                                </Link>
+                                <Link href="/register">
+                                    <button className='btn btn-bg fw-bold rounded-pill'>Sign Up</button>
+                                </Link>
+                            </>}
+                            {user?.email && <>
+                                <Link href="/dashboard">
+                                    <button className='btn btn-outline me-2 btn-bg fw-bold rounded-pill'>Dashboard</button>
+                                </Link>
+                                <btn onClick={logOut} className="btn-bg m-2 fw-bold btn rounded-pill">Logout</btn>
+                            </>}
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </>
     );
 };

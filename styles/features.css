@@ -1,46 +1,27 @@
 .features-section {
-    background-color: #0A131E;
-}
-
-.feature-bg {
-    background-image: url("/feature1bg.png");
-    height: 160vh auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.feature-bg2 {
-    background-image: url("/feature2bg.png");
-    height: 160vh auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.feature-bg3 {
-    background-image: url("/feature3bg.png");
-    height: 160vh auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #FFFFFF;
+    overflow: hidden;
 }
 
 .features-heading {
-    color: #FFCB73;
+    color: #55428F;
     font-size: 3rem;
     overflow: hidden;
 }
 
 .feature-box {
-    background: transparent;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 20px 20px 60px #d9d9d9,
+        -20px -20px 60px #ffffff;
 }
 
 .feature-title {
+    color: #343030;
     font-size: 2rem;
     overflow: hidden;
 }
 
 .feature-title-color {
-    color: #FFCB73;
+    color: #55428F
 }

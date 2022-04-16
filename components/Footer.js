@@ -5,15 +5,29 @@ const Footer = () => {
         <>
             <div className="divider"></div>
             <div className="container-fluid footer py-5">
-                <div className="container footer-items">
-                    <Link className="navbar-brand" href="/"><h1 className='logo fw-bold text-center'><span className='logo-color'>Pay</span>Cube</h1></Link>
-                    <p className="text-muted">Your Money Manager</p>
-                    <h2 className="follow-us-title">Follow <span className="text-white">Us</span></h2>
-                    <div className="social-icons mt-3 p-3">
-                        <img src="/social.png" className="img-fluid social-img" alt="social" />
+                <div className="container">
+                    <div className="row g-5">
+                        <div className="col-md-6">
+                            <div className="input-group subscribe-part">
+                                <h2 className="follow-us-title mb-4">Get <span className="fu-color">Newsletter</span></h2>
+                                <div className="subscribe-items">
+                                    <input type="text" className="input-box border-0 p-3" placeholder="Enter Your Email" aria-label="Recipient's username" />
+                                    <button className="btn btn-bg fw-bold rounded-pill mt-3" type="button">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="container footer-items">
+                                <Link className="navbar-brand" href="/"><img src="/logo.png" className="img-fluid logo" alt="logo" /></Link>
+                                <p className="text-muted">Your Money Manager</p>
+                                <h2 className="follow-us-title">Follow <span className="fu-color">Us</span></h2>
+                                <div className="social-icons mt-3 p-3">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h6 className="text-muted copyright mt-5">&#9400; Created By <span className="text-white">CodersComrade</span> || 2022 All Rights Resurved</h6>
                 </div>
+                <h6 className="text-muted copyright mt-5 text-center">&#9400; Created By <span className="company-name">CodersComrade</span> || All Rights Resurved</h6>
             </div>
         </>
     );
