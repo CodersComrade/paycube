@@ -21,6 +21,7 @@ const Login = () => {
   const handleLoginSubmit = (e) => {
     loginUser(loginData.email, loginData.password, location, history);
     e.preventDefault();
+    e.target.value
   };
 
   return (
