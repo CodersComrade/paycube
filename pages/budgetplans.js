@@ -35,7 +35,7 @@ const Budgetplans = () => {
                     <div className="col-md-2">
                         <Sidenav></Sidenav>
                     </div>
-                    <div className="col-md-10 dashboard bg-dark">
+                    <div className="col-md-10 dashboard">
                         <div className="row">
                             {
                                 budget.map(data => <BudgetCard key={data._id} budget={data}></BudgetCard>)
@@ -55,7 +55,7 @@ const Budgetplans = () => {
                             >
                                 <input
                                     style={{
-                                        border: '2px solid #32AEB1',
+                                        border: '2px solid #55428F',
                                         borderRadius: '5px',
                                         padding: '10px',
                                     }}
@@ -65,7 +65,7 @@ const Budgetplans = () => {
                                 />
                                 <input
                                     style={{
-                                        border: '2px solid #32AEB1',
+                                        border: '2px solid #55428F',
                                         borderRadius: '5px',
                                         padding: '10px',
                                     }}
@@ -75,7 +75,7 @@ const Budgetplans = () => {
                                 />
                                 <textarea
                                     style={{
-                                        border: '2px solid #32AEB1',
+                                        border: '2px solid #55428F',
                                         borderRadius: '5px',
                                         padding: '10px',
                                     }}
@@ -84,7 +84,7 @@ const Budgetplans = () => {
                                     {...register('description', { required: true })}
                                 />
 
-                                <input className="btn btn-info w-50 mx-auto " type="submit" value='create' />
+                                <input className="btn btn-bg w-50 mx-auto " type="submit" value='create' />
                             </form>
                         </Modal>
 

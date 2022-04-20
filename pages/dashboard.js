@@ -2,8 +2,17 @@ import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 import Mobilenav from '../components/Mobilenav';
 import Linechart from "../components/Linechart";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
+    const [balance, setBalance] = useState([])
+
+    useEffect(() => {
+        fetch('https://ob.nordigen.com/api/v2/requisitions/8126e9fb-93c9-4228-937c-68f0383c2df7/')
+            .then(res => res.json())
+            .then(data => setBalance(data))
+    }, [])
+
     return (
         <>
             <Mobilenav></Mobilenav>
@@ -20,7 +29,7 @@ const Dashboard = () => {
                                     <div className="card amount-box border-0 p-3">
                                         <div className="card-body">
                                             <h5 className="card-title amount-title mb-3 fw-bold">Transaction</h5>
-                                            <h3 className="card-subtitle mb-2 text-muted amount">$ 3000</h3>
+                                            <h3 className="card-subtitle mb-2 text-muted amount">$ {balance}</h3>
                                         </div>
                                     </div>
                                 </div>
