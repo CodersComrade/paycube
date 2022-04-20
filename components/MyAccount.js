@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import CreateNewAcc from './CreateNewAcc';
+import useAuth from './hooks/useAuth';
 import SingleAcc from './SingleAcc';
 
 const MyAccount = () => {
+    const { user } = useAuth();
     const [accounts, setAccounts] = useState([]);
+    const [addNewAccount, SetAddNewAccount] = useState(false);
+
+    const addAccount = () => {
+        SetAddNewAccount(true);
+    }
 
     useEffect(() => {
-        fetch('https://fierce-chamber-90534.herokuapp.com/getAccounts')
+        fetch(`http://localhost:5000/getAccounts/${user.email}`)
             .then(res => res.json())
             .then(data => setAccounts(data.reverse()));
-    },[])
+    },[addNewAccount])
    
     return (
         <div className="container">
@@ -22,7 +29,7 @@ const MyAccount = () => {
             </div>
             {/* modal start */}
             <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <CreateNewAcc></CreateNewAcc>
+                <CreateNewAcc addAccount={addAccount}></CreateNewAcc>
             </div>
             {/* modal end */}
             <div className="row  m-3">

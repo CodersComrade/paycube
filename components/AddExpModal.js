@@ -3,7 +3,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from './hooks/useAuth';
 
-const AddMoneyModal = ({account,isAddNew}) => { 
+const AddExpModal = ({account,isAddNew}) => {
     const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
 
@@ -24,7 +24,7 @@ const AddMoneyModal = ({account,isAddNew}) => {
             data.accountId = account._id;
             data.accountName = account.name;
             data.date = newDate;
-            axios.post('http://localhost:5000/addedMoney', data).then(res => {
+            axios.post('http://localhost:5000/addedExpence', data).then(res => {
                 if (res.data.insertedId) {
                     isAddNew();
                     alert('added successfully');
@@ -40,7 +40,7 @@ const AddMoneyModal = ({account,isAddNew}) => {
         <div className="modal-dialog">
         <div  style={{ boxShadow: '1px 1px 4px 0px #55428F' }} className="modal-content">
             <div className="modal-header d-flex justify-content-between align-items-center">
-                <h5 className="modal-title fs-2" id="exampleModalLabel">Add Money</h5>
+                <h5 className="modal-title fs-2" id="exampleModalLabel">Add Expence</h5>
                 <button type="button" className="btn" data-bs-dismiss="modal" aria-label="Close">
                     <img src="/close.png" style={{maxWidth: '30px'}} alt="" />
                 </button>
@@ -55,10 +55,10 @@ const AddMoneyModal = ({account,isAddNew}) => {
                             type="text"
                             class="form-control mb-3 fs-4 fw-bold"
                             id="floatingPassword"
-                            placeholder="Source Of This Money"
-                            {...register('source', { required: true })}
+                            placeholder="Reason Of Expence"
+                            {...register('reason', { required: true })}
                         />
-                        <label for="floatingPassword">Source Of This Money</label>
+                        <label for="floatingPassword">Reason Of Expence</label>
                     </div> 
                     <div class="form-floating">
                         <input
@@ -80,4 +80,4 @@ const AddMoneyModal = ({account,isAddNew}) => {
     );
 };
 
-export default AddMoneyModal;
+export default AddExpModal;
