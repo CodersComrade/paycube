@@ -3,17 +3,20 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from './hooks/useAuth';
 
-const CreateNewAcc = () => {
+const CreateNewAcc = ({ addAccount }) => {
     const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post('https://fierce-chamber-90534.herokuapp.com/accounts', data).then(res => {
-            if (res.data.insertedId) {
-                alert('added successfully');
-                reset();
-            }
-        });
+        if (user.email) {
+            axios.post('http://localhost:5000/accounts', data).then(res => {
+                if (res.data.insertedId) {
+                    addAccount();
+                    alert('added successfully');
+                    reset();
+                }
+            })
+        }
     };
 
     return (
@@ -51,10 +54,10 @@ const CreateNewAcc = () => {
                         <div>
                             <input className="btn btn-bg rounded-3 text-uppercase w-100" type="submit" value='create' />
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    </form >
+                </div >
+            </div >
+        </div >
     );
 };
 
