@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import AccHeader from '../../components/AccHeader';
 import Dashboardnav from '../../components/Dashboardnav';
+import HighLightDetails from '../../components/HighLightDetails';
 import useAuth from '../../components/hooks/useAuth';
 import Mobilenav from '../../components/Mobilenav';
 import ShowDetails from '../../components/ShowDetails';
@@ -13,9 +14,15 @@ const accNo = () => {
     const { user } = useAuth();
     const [account, setAccount] = useState([]);
     const [addNew, setAddNew] = useState(false);
+    const [addExp, setAddExp] = useState(false);
+    const [addedMoney, setAddedMoney] = useState([])
+    const [addedExp, setAddedExp] = useState([])
 
-    const isAddNew = () => {
-        setAddNew(true);
+    const isAddNewMoney = (d) => {
+        setAddNew(d);
+    }
+    const isAddNewExp = (d) => {
+        setAddExp(d);
     }
     
     useEffect(() => {
@@ -25,6 +32,29 @@ const accNo = () => {
                 .then(data => data.map(d => setAccount(d)))
         }
     }, [user]);
+
+
+    useEffect(() => {
+        if (account._id) {
+            fetch(`http://localhost:5000/getAddedMoney/${account._id}`)
+                .then(res => res.json())
+                .then(data => setAddedMoney(data.reverse()))
+        }
+    }, [account,addNew,addExp]);
+
+    useEffect(() => {
+        if (account._id) {
+            fetch(`http://localhost:5000/getExp/${account._id}`)
+                .then(res => res.json())
+                .then(data => setAddedExp(data.reverse()))
+        }
+    }, [account,addNew,addExp]);
+    
+    let totalBlnc = 0;
+    addedMoney.map(data => totalBlnc = totalBlnc + parseInt(data.amount))
+    let expBlnc = 0;
+    addedExp.map(data => expBlnc = expBlnc + parseInt(data.amount))
+    let ablBlnc = totalBlnc > expBlnc ? totalBlnc - expBlnc : 0;
 
     return (
         <>
@@ -36,8 +66,19 @@ const accNo = () => {
                     </div>
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
-                        <AccHeader isAddNew={isAddNew} account={account}></AccHeader>
-                        <ShowDetails addNew={addNew} account={account}></ShowDetails>
+                        <AccHeader
+                            isAddNewMoney={isAddNewMoney}
+                            isAddNewExp={isAddNewExp}
+                            account={account}
+                        >
+                        </AccHeader>
+                        <HighLightDetails
+                            totalBlnc={totalBlnc}
+                            expBlnc={expBlnc}
+                            ablBlnc={ablBlnc}
+                        >
+                        </HighLightDetails>
+                        <ShowDetails addedMoney={addedMoney} addedExp={addedExp}></ShowDetails>
                     </div>
                 </div>
             </div>

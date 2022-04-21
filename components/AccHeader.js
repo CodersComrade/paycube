@@ -2,7 +2,7 @@ import React from 'react';
 import AddExpModal from './AddExpModal';
 import AddMoneyModal from './AddMoneyModal';
 
-const AccHeader = ({account,isAddNew}) => {
+const AccHeader = ({account,isAddNewExp,isAddNewMoney}) => {
     return (
         <div className="container">
             <div className="row px-5 py-4 bg-white">
@@ -22,7 +22,7 @@ const AccHeader = ({account,isAddNew}) => {
                     </div>
                     {/* modal start */}
                     <div className="modal fade" id="addMoneyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <AddMoneyModal isAddNew={isAddNew} account={account}></AddMoneyModal>
+                        <AddMoneyModal isAddNewMoney={isAddNewMoney} account={account}></AddMoneyModal>
                     </div>
                     {/* modal end */}
                 </div>
@@ -37,7 +37,7 @@ const AccHeader = ({account,isAddNew}) => {
                     </div>
                     {/* modal start */}
                     <div className="modal fade" id="addExpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <AddExpModal isAddNew={isAddNew} account={account}></AddExpModal>
+                        <AddExpModal isAddNewExp={isAddNewExp} account={account}></AddExpModal>
                     </div>
                     {/* modal end */}
                 </div>

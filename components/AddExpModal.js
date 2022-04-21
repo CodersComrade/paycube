@@ -3,7 +3,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from './hooks/useAuth';
 
-const AddExpModal = ({account,isAddNew}) => {
+const AddExpModal = ({account,isAddNewExp}) => {
     const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
 
@@ -19,6 +19,7 @@ const AddExpModal = ({account,isAddNew}) => {
 
 
     const onSubmit = data => {
+        isAddNewExp(false);
         if (user.email === account.email) {
             data.userId = user.email;
             data.accountId = account._id;
@@ -26,7 +27,7 @@ const AddExpModal = ({account,isAddNew}) => {
             data.date = newDate;
             axios.post('http://localhost:5000/addedExpence', data).then(res => {
                 if (res.data.insertedId) {
-                    isAddNew();
+                    isAddNewExp(true);
                     alert('added successfully');
                     reset();
                 }

@@ -3,7 +3,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from './hooks/useAuth';
 
-const AddMoneyModal = ({account,isAddNew}) => { 
+const AddMoneyModal = ({account,isAddNewMoney}) => { 
     const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
 
@@ -19,6 +19,7 @@ const AddMoneyModal = ({account,isAddNew}) => {
 
 
     const onSubmit = data => {
+        isAddNewMoney(false);
         if (user.email === account.email) {
             data.userId = user.email;
             data.accountId = account._id;
@@ -26,7 +27,7 @@ const AddMoneyModal = ({account,isAddNew}) => {
             data.date = newDate;
             axios.post('http://localhost:5000/addedMoney', data).then(res => {
                 if (res.data.insertedId) {
-                    isAddNew();
+                    isAddNewMoney(true);
                     alert('added successfully');
                     reset();
                 }

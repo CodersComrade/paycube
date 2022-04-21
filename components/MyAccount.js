@@ -13,10 +13,12 @@ const MyAccount = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/getAccounts/${user.email}`)
-            .then(res => res.json())
-            .then(data => setAccounts(data.reverse()));
-    },[addNewAccount])
+        if (user.email) {
+            fetch(`http://localhost:5000/getAccounts/${user.email}`)
+                .then(res => res.json())
+                .then(data => setAccounts(data.reverse()))
+        }
+    }, [addNewAccount,user]);
    
     return (
         <div className="container">

@@ -8,13 +8,15 @@ const CreateNewAcc = ({ addAccount }) => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/accounts', data).then(res => {
-            if (res.data.insertedId) {
-                addAccount();
-                alert('added successfully');
-                reset();
-            }
-        });
+        if (user.email) {
+            axios.post('http://localhost:5000/accounts', data).then(res => {
+                if (res.data.insertedId) {
+                    addAccount();
+                    alert('added successfully');
+                    reset();
+                }
+            })
+        }
     };
 
     return (
