@@ -1,3 +1,4 @@
+
 import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 import Mobilenav from "../components/Mobilenav";
@@ -29,6 +30,7 @@ const Approve = () => {
     })
       .then((res) => res.json())
       .then((result) => console.log(result));
+      alert("success")
     e.preventDefault();
   };
 

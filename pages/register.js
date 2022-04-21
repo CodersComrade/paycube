@@ -9,22 +9,35 @@ const Register = () => {
   const { user, registerUser, signInUsingGoogle, isLoading, Error } =
     useAuth();
 
-  const handleOnBlur = (e) => {
+  const handleOnBlur = (e, data) => {
+    
     const field = e.target.name;
     const value = e.target.value;
     const newLoginData = { ...loginData };
     newLoginData[field] = value;
     setLoginData(newLoginData);
 
-    // console.log(newLoginData)
+    console.log(newLoginData)
   };
-  const handleLoginSubmit = (e) => {
-    console.log(e);
+
+
+  const handleLoginSubmit = (e, data) => {
+    loginData.balance = 5000;
     if (loginData.password !== loginData.reTypePassword) {
       alert("didnt match");
       return;
     }
-    registerUser(loginData.email, loginData.password, loginData.name);
+    registerUser(loginData.email, loginData.password, loginData.name, loginData.balance);
+
+    fetch("https://stormy-fortress-30009.herokuapp.com/users",{
+      method: "POST",
+      headers: {"content-type": "application/json"},
+      body: JSON.stringify(loginData),            
+  })
+  .then( res => res.json())
+  .then(result => console.log(result))
+    // console.log(data);
+    console.log(loginData)
     e.preventDefault();
   };
 
@@ -42,6 +55,24 @@ const Register = () => {
                 Sign Up <span className="rl-title-color">For Free</span>
               </h2>
               <form onSubmit={handleLoginSubmit} className="row g-3">
+              <div className="col-md-12">
+                  <label
+                    // htmlFor="inputEmail4"
+                    className="form-label text-dark"
+                  >
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    onBlur={handleOnBlur}
+                    name="userName"
+                    className="form-control"
+                    required
+                    // id="inputEmail4"
+                    // autoComplete="off"
+                  />
+                </div>          
+           
                 <div className="col-md-12">
                   <label
                     htmlFor="inputEmail4"
@@ -56,6 +87,23 @@ const Register = () => {
                     className="form-control"
                     required
                     id="inputEmail4"
+                    autoComplete="off"
+                  />
+                </div>
+                <div className="col-md-12">
+                  <label
+                    // htmlFor="inputPassword4"
+                    className="form-label text-dark"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    onBlur={handleOnBlur}
+                    name="phoneNumber"
+                    required
+                    className="form-control"
+                    // id="inputPassword4"
                     autoComplete="off"
                   />
                 </div>
