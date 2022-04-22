@@ -14,7 +14,7 @@ const MyAccount = () => {
 
     useEffect(() => {
         if (user.email) {
-            fetch(`http://localhost:5000/getAccounts/${user.email}`)
+            fetch(`https://fierce-wildwood-99415.herokuapp.com/getAccounts/${user.email}`)
                 .then(res => res.json())
                 .then(data => setAccounts(data.reverse()))
         }

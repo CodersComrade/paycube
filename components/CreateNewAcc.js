@@ -9,7 +9,7 @@ const CreateNewAcc = ({ addAccount }) => {
 
     const onSubmit = data => {
         if (user.email) {
-            axios.post('http://localhost:5000/accounts', data).then(res => {
+            axios.post('https://fierce-wildwood-99415.herokuapp.com/accounts', data).then(res => {
                 if (res.data.insertedId) {
                     addAccount();
                     alert('added successfully');

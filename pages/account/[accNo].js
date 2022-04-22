@@ -27,7 +27,7 @@ const accNo = () => {
     
     useEffect(() => {
         if (user.email) {
-            fetch(`http://localhost:5000/account/${pageNum}`)
+            fetch(`https://fierce-wildwood-99415.herokuapp.com/account/${pageNum}`)
                 .then(res => res.json())
                 .then(data => data.map(d => setAccount(d)))
         }
@@ -36,7 +36,7 @@ const accNo = () => {
 
     useEffect(() => {
         if (account._id) {
-            fetch(`http://localhost:5000/getAddedMoney/${account._id}`)
+            fetch(`https://fierce-wildwood-99415.herokuapp.com/getAddedMoney/${account._id}`)
                 .then(res => res.json())
                 .then(data => setAddedMoney(data.reverse()))
         }
@@ -44,7 +44,7 @@ const accNo = () => {
 
     useEffect(() => {
         if (account._id) {
-            fetch(`http://localhost:5000/getExp/${account._id}`)
+            fetch(`https://fierce-wildwood-99415.herokuapp.com/getExp/${account._id}`)
                 .then(res => res.json())
                 .then(data => setAddedExp(data.reverse()))
         }

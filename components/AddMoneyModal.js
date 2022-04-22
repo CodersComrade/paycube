@@ -25,7 +25,7 @@ const AddMoneyModal = ({account,isAddNewMoney}) => {
             data.accountId = account._id;
             data.accountName = account.name;
             data.date = newDate;
-            axios.post('http://localhost:5000/addedMoney', data).then(res => {
+            axios.post('https://fierce-wildwood-99415.herokuapp.com/addedMoney', data).then(res => {
                 if (res.data.insertedId) {
                     isAddNewMoney(true);
                     alert('added successfully');
