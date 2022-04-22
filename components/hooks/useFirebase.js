@@ -1,16 +1,19 @@
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider,  onAuthStateChanged , signOut} from "firebase/auth";
+import Router from "next/dist/server/router";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firebase/firebase.init";
+import { useRouter } from 'next/router'
 
 initializeAuthentication();
 const useFirebase = () => {
-   
+    
     const [user, setUser] = useState({});
     const [error, setError] = useState('')
     const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();  
+    const router = useRouter();
    
    
     const registerUser = (email, password, name, history) => {
@@ -27,7 +30,8 @@ const useFirebase = () => {
                 }).catch((error) => {
                     
                 });
-                history.replace('/');
+                // router.push('/dashboard')
+                // router.replace('/');
             })
             .catch((error) => {
                 setError(error.message);
@@ -40,10 +44,10 @@ const useFirebase = () => {
     const loginUser = (email, password, location, history) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => { 
+            .then((userCredential) => {            
         
-                const destination = location?.state?.from || '/';
-                history.replace(destination);
+                // const destination = location?.state?.from || '/';
+                // history.push(destination);
                 setError('');
             })
             .catch((error) => {
@@ -67,10 +71,13 @@ const useFirebase = () => {
 
     }
     const logOut = () => {
+        
         setIsLoading(true);
         signOut(auth)
-            .then(() => { })
-            .finally(() => setIsLoading(false));
+            .then(() => { router.push('/') })
+            .finally(() => setIsLoading(false)
+           
+            );
     }
     useEffect(()=>{
       const unsubscribed =  onAuthStateChanged(auth, user => {
