@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import useAuth from './hooks/useAuth';
 
-const Sidenav = () => {
+const Adminsidenav = () => {
     const { user } = useAuth();
     return (
         <>
@@ -21,28 +21,19 @@ const Sidenav = () => {
                 <hr />
                 <div className='sidenav-items mt-4'>
                     <p className='menu'>
-                        <Link href="/dashboard"><span>Dashboard</span></Link>
+                        <Link href="/admindashboard"><span>Dashboard</span></Link>
                     </p>
                     <p className='menu'>
-                        <Link href="/profile"><span>Profile</span></Link>
+                        <Link href="/users"><span>All Users</span></Link>
                     </p>
                     <p className='menu'>
-                        <Link href="/accounts"><span>My Wallet</span></Link>
+                        <Link href="/adminanalytics"><span>Analytics</span></Link>
                     </p>
                     <p className='menu'>
-                        <Link href="/makepayment"><span>Make Payment</span></Link>
+                        <Link href="/approvemerchant"><span>Approve Merchant</span></Link>
                     </p>
                     <p className='menu'>
-                        <Link href="/budgetplans"><span>Budget Plans</span></Link>
-                    </p>
-                    <p className='menu'>
-                        <Link href="/expensetracker"><span>Expense Tracker</span></Link>
-                    </p>
-                    <p className='menu'>
-                        <Link href="/analytics"><span>Analytics</span></Link>
-                    </p>
-                    <p className='menu'>
-                        <Link href="/merchant"><span>Be A Merchant</span></Link>
+                        <Link href="/approvereview"><span>Approve Review</span></Link>
                     </p>
                 </div>
             </div>
@@ -50,4 +41,4 @@ const Sidenav = () => {
     );
 };
 
-export default Sidenav;
+export default Adminsidenav;
