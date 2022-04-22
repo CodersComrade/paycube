@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
-  const { user, loginUser, isLoading, Error } = useAuth();
+  const { auth,user, loginUser, isLoading, Error } = useAuth();
   const router = useRouter();
 
   const handleOnBlur = (e) => {

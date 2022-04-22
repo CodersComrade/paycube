@@ -7,11 +7,11 @@ import { useEffect, useState } from "react";
 const Dashboard = () => {
     const [balance, setBalance] = useState([])
 
-    useEffect(() => {
-        fetch('https://ob.nordigen.com/api/v2/requisitions/8126e9fb-93c9-4228-937c-68f0383c2df7/')
-            .then(res => res.json())
-            .then(data => setBalance(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('https://ob.nordigen.com/api/v2/requisitions/8126e9fb-93c9-4228-937c-68f0383c2df7/')
+    //         .then(res => res.json())
+    //         .then(data => setBalance(data))
+    // }, [])
 
     return (
         <>
