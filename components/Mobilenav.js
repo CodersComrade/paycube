@@ -33,6 +33,9 @@ const Mobilenav = () => {
                                     <Link href="/expensetracker"><span>Expense Tracker</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
+                                    <Link href="/exchangerates"><span>Exchange Rates</span></Link>
+                                </li>
+                                <li className="nav-item menu m-1">
                                     <Link href="/analytics"><span>Analytics</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
