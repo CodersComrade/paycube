@@ -1,7 +1,7 @@
 import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 import Mobilenav from '../components/Mobilenav';
-import MyAccount from "../components/MyAccount";
+import MyAccounts from "../components/MyAccounts";
 
 const Expensetracker = () => {
     return (
@@ -14,7 +14,7 @@ const Expensetracker = () => {
                     </div>
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
-                        <MyAccount></MyAccount>
+                        <MyAccounts></MyAccounts>
                     </div>
                 </div>
             </div>

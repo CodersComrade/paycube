@@ -3,7 +3,7 @@ import CreateNewAcc from './CreateNewAcc';
 import useAuth from './hooks/useAuth';
 import SingleAcc from './SingleAcc';
 
-const MyAccount = () => {
+const MyAccounts = () => {
     const { user } = useAuth();
     const [accounts, setAccounts] = useState([]);
     const [addNewAccount, SetAddNewAccount] = useState(false);
@@ -43,4 +43,4 @@ const MyAccount = () => {
     );
 };
 
-export default MyAccount;
+export default MyAccounts;
