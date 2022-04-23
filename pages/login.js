@@ -3,10 +3,12 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useState } from "react";
 import useAuth from "../components/hooks/useAuth";
+import { useRouter } from 'next/router'
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
-  const { user, loginUser, isLoading, Error } = useAuth();
+  const { auth,user, loginUser, isLoading, Error } = useAuth();
+  const router = useRouter();
 
   const handleOnBlur = (e) => {
     const field = e.target.name;
@@ -21,6 +23,7 @@ const Login = () => {
   const handleLoginSubmit = (e) => {
     loginUser(loginData.email, loginData.password, location, history);
     e.preventDefault();
+    router.push('dashboard')
     e.target.value
   };
 
