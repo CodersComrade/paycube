@@ -25,7 +25,7 @@ const AddExpModal = ({account,isAddNewExp}) => {
             data.accountId = account._id;
             data.accountName = account.name;
             data.date = newDate;
-            axios.post('http://localhost:5000/addedExpence', data).then(res => {
+            axios.post('https://fierce-wildwood-99415.herokuapp.com/addedExpence', data).then(res => {
                 if (res.data.insertedId) {
                     isAddNewExp(true);
                     alert('added successfully');

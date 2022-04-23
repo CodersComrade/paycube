@@ -14,7 +14,7 @@ const Budgetplans = () => {
     const [budget, setBudget] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/getBudget')
+        fetch('https://fierce-wildwood-99415.herokuapp.com/getBudget')
             .then(res => res.json())
             .then(data => setBudget(data))
     }, [])
@@ -22,7 +22,7 @@ const Budgetplans = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/budget', data).then(res => {
+        axios.post('https://fierce-wildwood-99415.herokuapp.com/budget', data).then(res => {
             if (res.data.insertedId) {
                 handleClose();
                 alert('added successfully');
