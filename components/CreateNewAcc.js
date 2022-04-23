@@ -41,15 +41,15 @@ const CreateNewAcc = ({ addAccount }) => {
                             className="form-control mb-3 fs-4 py-2"
                             {...register('email', { required: true })}
                         />
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input
                                 type="text"
-                                class="form-control mb-3 fs-4 fw-bold"
+                                className="form-control mb-3 fs-4 fw-bold"
                                 id="floatingPassword"
                                 placeholder="Account Name"
                                 {...register('name', { required: true })}
                             />
-                            <label for="floatingPassword">Enter Account Name</label>
+                            <label htmlFor="floatingPassword">Enter Account Name</label>
                         </div>
                         <div>
                             <input className="btn btn-bg rounded-3 text-uppercase w-100" type="submit" value='create' />

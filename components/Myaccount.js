@@ -18,8 +18,8 @@ const MyAccount = () => {
                 .then(res => res.json())
                 .then(data => setAccounts(data.reverse()))
         }
-    }, [addNewAccount,user]);
-   
+    }, [addNewAccount, user]);
+
     return (
         <div className="container">
             <div className='d-flex justify-content-center align-items-center text-capitalize m-2 p-2'>
@@ -30,7 +30,7 @@ const MyAccount = () => {
                 </button>
             </div>
             {/* modal start */}
-            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <CreateNewAcc addAccount={addAccount}></CreateNewAcc>
             </div>
             {/* modal end */}
