@@ -16,7 +16,7 @@ const Accounts = () => {
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
                         <div className="add-btn">
-                            <Link href='https://lit-lowlands-64850.herokuapp.com/' target="_blank"><button type="button" className="btn btn-bg rounded-pill">Add Money</button></Link>
+                            <Link href='/addMoney' target="_blank"><button type="button" className="btn btn-bg rounded-pill">Add Money</button></Link>
                         </div>
                         <Areachart></Areachart>
                     </div>

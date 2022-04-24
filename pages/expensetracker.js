@@ -15,6 +15,7 @@ const Expensetracker = () => {
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
                         <Myaccount></Myaccount>
+
                     </div>
                 </div>
             </div>
