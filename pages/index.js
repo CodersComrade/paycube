@@ -6,6 +6,7 @@ import Subbanner from '../components/Subbanner'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Brands from '../components/Brands'
+import Reviews from '../components/Reviews'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Mainbanner></Mainbanner>
       <Subbanner></Subbanner>
       <Features></Features>
+      <Reviews></Reviews>
       <App></App>
       <Brands></Brands>
       <Footer></Footer>
