@@ -4,6 +4,7 @@ import Mobilenav from "../components/Mobilenav";
 import Linechart from "../components/Linechart";
 import useAuth from "../components/hooks/useAuth";
 import { useEffect, useState } from "react";
+import Reviews from "../components/Reviews";
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -72,6 +73,7 @@ const Dashboard = () => {
               )}
             </div>
             <Linechart></Linechart>
+            <Reviews></Reviews>
           </div>
         </div>
       </div>

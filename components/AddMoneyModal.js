@@ -3,24 +3,40 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from './hooks/useAuth';
 
-const AddMoneyModal = ({ account }) => {
-    console.log(account);
+const AddMoneyModal = ({ account, isAddNewMoney }) => {
     const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
 
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+    const d = new Date();
+    let year = d.getFullYear();
+    let month = months[d.getMonth()];
+    let date = d.getDate();
+    let day = days[d.getDay()];
+    let newDate = day + ", " + date + " " + month + " " + year;
+
+
     const onSubmit = data => {
-        data.userId = user.email;
-        data.accountId = account.id;
-        data.accountName = account.name;
-        console.log(data);
-        reset();
-        axios.post('https://fierce-chamber-90534.herokuapp.com/addedMoney', data).then(res => {
-            if (res.data.insertedId) {
-                alert('added successfully');
-                reset();
-            }
-        });
+        isAddNewMoney(false);
+        if (user.email === account.email) {
+            data.userId = user.email;
+            data.accountId = account._id;
+            data.accountName = account.name;
+            data.date = newDate;
+            axios.post('https://fierce-wildwood-99415.herokuapp.com/addedMoney', data).then(res => {
+                if (res.data.insertedId) {
+                    isAddNewMoney(true);
+                    alert('added successfully');
+                    reset();
+                }
+            });
+        }
+
     };
+
+
     return (
         <div className="modal-dialog">
             <div style={{ boxShadow: '1px 1px 4px 0px #55428F' }} className="modal-content">

@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import CreateNewAcc from './CreateNewAcc';
+import useAuth from './hooks/useAuth';
 import SingleAcc from './SingleAcc';
 
-const MyAccount = () => {
+const MyAccounts = () => {
+    const { user } = useAuth();
     const [accounts, setAccounts] = useState([]);
+    const [addNewAccount, SetAddNewAccount] = useState(false);
+
+    const addAccount = () => {
+        SetAddNewAccount(true);
+    }
 
     useEffect(() => {
-        fetch('https://fierce-chamber-90534.herokuapp.com/getAccounts')
-            .then(res => res.json())
-            .then(data => setAccounts(data.reverse()));
-    }, [])
+        if (user.email) {
+            fetch(`https://fierce-wildwood-99415.herokuapp.com/getAccounts/${user.email}`)
+                .then(res => res.json())
+                .then(data => setAccounts(data.reverse()))
+        }
+    }, [addNewAccount, user]);
 
     return (
         <div className="container">
@@ -22,7 +31,7 @@ const MyAccount = () => {
             </div>
             {/* modal start */}
             <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <CreateNewAcc></CreateNewAcc>
+                <CreateNewAcc addAccount={addAccount}></CreateNewAcc>
             </div>
             {/* modal end */}
             <div className="row  m-3">
@@ -34,4 +43,4 @@ const MyAccount = () => {
     );
 };
 
-export default MyAccount;
+export default MyAccounts;

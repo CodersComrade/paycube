@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import useAuth from "./hooks/useAuth";
 
-const Mobilenav = () => {
+const Mobileadminnav = () => {
     const { user, logOut } = useAuth();
     return (
         <>
@@ -15,34 +15,19 @@ const Mobilenav = () => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item menu mt-2 m-1">
-                                    <Link href="/dashboard"><span>Dashboard</span></Link>
+                                    <Link href="/admindashboard"><span>Dashboard</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
-                                    <Link href="/profile"><span>Profile</span></Link>
+                                    <Link href="/users"><span>All Users</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
-                                    <Link href="/accounts"><span>My Wallet</span></Link>
+                                    <Link href="/adminanalytics"><span>Analytics</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
-                                    <Link href="/makepayment"><span>Make Payment</span></Link>
+                                    <Link href="/approvemarchant"><span>Approve Merchant</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
-                                    <Link href="/budgetplans"><span>Budget Plans</span></Link>
-                                </li>
-                                <li className="nav-item menu m-1">
-                                    <Link href="/expensetracker"><span>Expense Tracker</span></Link>
-                                </li>
-                                <li className="nav-item menu m-1">
-                                    <Link href="/exchangerates"><span>Exchange Rates</span></Link>
-                                </li>
-                                <li className="nav-item menu m-1">
-                                    <Link href="/analytics"><span>Analytics</span></Link>
-                                </li>
-                                <li className="nav-item menu m-1">
-                                    <Link href="/merchant"><span>Be A Merchant</span></Link>
-                                </li>
-                                <li className="nav-item menu m-1">
-                                    <Link href="/approve"><span>Approve Request</span></Link>
+                                    <Link href="/approvereview"><span>Approve Review</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
                                     {user?.email && <>
@@ -62,4 +47,4 @@ const Mobilenav = () => {
     );
 };
 
-export default Mobilenav;
+export default Mobileadminnav;

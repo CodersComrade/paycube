@@ -3,6 +3,7 @@ import Sidenav from "../components/Sidenav";
 import Mobilenav from "../components/Mobilenav";
 import useAuth from "../components/hooks/useAuth";
 import { useEffect, useState } from "react";
+import WriteReview from "../components/WriteReview";
 
 const Profile = () => {
   const { user } = useAuth();
@@ -27,7 +28,7 @@ const Profile = () => {
               <div className="card p-5 profile-card border-0">
                 {currentUsers.map(
                   (currentUser) =>
-                    
+
                     user.email == currentUser.email && (
                       <div className="row g-3">
                         <div className="col-md-4">
@@ -60,10 +61,10 @@ const Profile = () => {
                             <p className="card-text text-dark fs-5">
                               Mobile No:{" "}
                               <span className="info-color fw-bold">
-                              {currentUser.phoneNumber}
+                                {currentUser.phoneNumber}
                               </span>
                             </p>
-                           <button className="btn btn-bg rounded-pill fw-bold mt-4">
+                            <button className="btn btn-bg rounded-pill fw-bold mt-4">
                               Edit Profile
                             </button>
                           </div>
@@ -73,6 +74,8 @@ const Profile = () => {
                 )}
               </div>
             </div>
+
+            <WriteReview></WriteReview>
           </div>
         </div>
       </div>

@@ -3,11 +3,13 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useState } from "react";
 import useAuth from "../components/hooks/useAuth";
+import { useRouter } from 'next/router'
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
   const { user, registerUser, signInUsingGoogle, isLoading, Error } =
     useAuth();
+    const router = useRouter();
 
   const handleOnBlur = (e, data) => {
     
@@ -39,6 +41,7 @@ const Register = () => {
     // console.log(data);
     console.log(loginData)
     e.preventDefault();
+    router.push('/dashboard')
   };
 
   return (

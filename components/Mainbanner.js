@@ -1,33 +1,35 @@
-import Image from 'next/image';
-import Link from "next/link";
+import Slide1 from './Slide1';
+import Slide2 from './Slide2';
+import Slide3 from './Slide3';
 
 const Mainbanner = () => {
     return (
         <>
-            <div className='container-fluid main-header py-5'>
-                <div className='container py-5'>
-                    <div className='row g-5'>
-                        <div className='col-md-5'>
-                            <div className='banner-texts mt-3'>
-                                <h1 className='banner-title mb-4 fw-bold'>Make Your <span className='title-color'>Money Management</span> More <span className='title-color'>Easier</span></h1>
-                                <p className='text-muted'>Annual income twenty pounds, annual expenditure nineteen six, result happiness. Annual income twenty pounds, annual expenditure twenty pound ought and six, result misery.</p>
-                                <p className="author-name fw-bold">--Charles Dickens</p>
-                                <Link href="/register">
-                                    <button className='btn btn-bg mt-4 fw-bold rounded-pill'>Sign Up For Free</button>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className='col-md-7'>
-                            <Image
-                                alt="banner"
-                                src="/bannerimg.svg"
-                                layout="responsive"
-                                width={700}
-                                height={475}
-                            />
-                        </div>
+            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <Slide1></Slide1>
+                    </div>
+                    <div className="carousel-item">
+                        <Slide2></Slide2>
+                    </div>
+                    <div className="carousel-item">
+                        <Slide3></Slide3>
                     </div>
                 </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
             </div>
         </>
     );

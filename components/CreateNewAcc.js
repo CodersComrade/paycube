@@ -3,17 +3,20 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from './hooks/useAuth';
 
-const CreateNewAcc = () => {
+const CreateNewAcc = ({ addAccount }) => {
     const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post('https://fierce-chamber-90534.herokuapp.com/accounts', data).then(res => {
-            if (res.data.insertedId) {
-                alert('added successfully');
-                reset();
-            }
-        });
+        if (user.email) {
+            axios.post('https://fierce-wildwood-99415.herokuapp.com/accounts', data).then(res => {
+                if (res.data.insertedId) {
+                    addAccount();
+                    alert('added successfully');
+                    reset();
+                }
+            })
+        }
     };
 
     return (
@@ -38,23 +41,23 @@ const CreateNewAcc = () => {
                             className="form-control mb-3 fs-4 py-2"
                             {...register('email', { required: true })}
                         />
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input
                                 type="text"
-                                class="form-control mb-3 fs-4 fw-bold"
+                                className="form-control mb-3 fs-4 fw-bold"
                                 id="floatingPassword"
                                 placeholder="Account Name"
                                 {...register('name', { required: true })}
                             />
-                            <label for="floatingPassword">Enter Account Name</label>
+                            <label htmlFor="floatingPassword">Enter Account Name</label>
                         </div>
                         <div>
                             <input className="btn btn-bg rounded-3 text-uppercase w-100" type="submit" value='create' />
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    </form >
+                </div >
+            </div >
+        </div >
     );
 };
 

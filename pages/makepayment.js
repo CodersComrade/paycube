@@ -1,4 +1,3 @@
-
 import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 import Mobilenav from "../components/Mobilenav";
@@ -28,12 +27,9 @@ const Makepayments = () => {
             <table className="table">
               <thead>
                 <tr>
-                  {/* <th scope="col">Logo</th>
-                          <th scope="col">Name</th>
-                         
-                         
-                          
-                          <th scope="col">Payment</th> */}
+                  <th scope="col">Logo</th>
+                  <th scope="col">Name</th>
+                  {/* <th scope="col">Payment</th> */}
                 </tr>
               </thead>
               {merchants.map((merchant) => (
