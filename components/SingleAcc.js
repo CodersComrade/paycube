@@ -10,6 +10,7 @@ const SingleAcc = ({ account }) => {
         selectedAcc.id = account._id;
         setAcc(selectedAcc);
     }
+
     return (
         <div className="col-md-6">
             <div style={{ boxShadow: '1px 1px 4px 0px #55428F' }} className="m-2 my-4 p-3 rounded-3">
