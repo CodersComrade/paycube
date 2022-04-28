@@ -1,6 +1,7 @@
 import Dashboardnav from "../components/Dashboardnav";
 import Adminsidenav from '../components/Adminsidenav';
 import Mobileadminnav from '../components/Mobileadminnav';
+import Adminbarchart from "../components/Adminbarchart";
 
 const Admianalytics = () => {
     return (
@@ -13,6 +14,10 @@ const Admianalytics = () => {
                     </div>
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
+                        <div className="add-btn">
+                            <h3 className="card-title feature-title mb-5 fw-bold">Applicaton <span className="feature-title-color">Overview</span></h3>
+                        </div>
+                        <Adminbarchart></Adminbarchart>
                     </div>
                 </div>
             </div>
