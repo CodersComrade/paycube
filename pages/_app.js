@@ -17,6 +17,7 @@ import '../styles/budgetcard.css'
 import '../styles/expensetracker.css'
 import '../styles/analytics.css'
 import '../styles/merchant.css'
+import '../styles/review.css'
 import '../styles/nav.css'
 
 
@@ -40,8 +41,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Script id="bootstrap-cdn" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossOrigin="anonymous"></Script>
       {/* {noAuthRequired.includes(router.pathname) ? ( */}
-        <Component {...pageProps} />)
-         {/* : 
+      <Component {...pageProps} />)
+      {/* : 
          (
 
           <ProtectedRoute>

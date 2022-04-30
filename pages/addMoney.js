@@ -1,12 +1,12 @@
 import React from 'react';
-import Bank from './Bank';
+import Bank from '../components/Bank';
 
 const addMoney = () => {
 
-    const banks = ['paypal', 'bbBank', 'fbsBank', 'Nib']
+    const banks = ['Paypal', 'Bb Bank', 'Fbs Bank', 'Nib Bank', 'Center Bank']
     return (
         <div>
-            <h1 class="display-6 text-center">Banks</h1>
+            <h1 className="merchant-title fw-bold my-4 ms-3 text-center">Choose Your <span className="merchant-title-color">Bank</span></h1>
             <div>
                 {
                     banks.map(bank => <Bank bank={bank}></Bank>)

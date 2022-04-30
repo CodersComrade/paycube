@@ -39,76 +39,80 @@ const Bank = ({ bank }) => {
     }
 
     return (
-        <div class="container">
-            <div class="row align-items-start">
-                <div class="col">
+        <div className="container">
+            <div className="row align-items-start">
+                <div className="col">
 
                 </div>
-                <div class="col text-center">
-                    <button type="button" class="btn btn-primary text-dark border-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        {bank}
-                    </button>
+                <div className="col">
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <button type="button" className="btn btn-bg border-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                {bank}
+                            </button>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col">
+                <div className="col">
 
                 </div>
             </div>
 
 
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
+            <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
 
-                            <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                            <button type="button" className="btn btn-close text-dark fw-bolder fs-3" data-bs-dismiss="modal" aria-label="Close">X</button>
                         </div>
 
-                        <div class="modal-body">
-
+                        <div className="modal-body">
+                            <h1 className="merchant-title fw-bold my-4 ms-3">Give Your <span className="merchant-title-color">Bank Information</span></h1>
                             <form onSubmit={handleSubmit}>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <div className="mb-3">
+                                    <label for="exampleInputEmail1" className="form-label">Email address</label>
                                     <input
                                         type="email"
                                         name='email'
                                         onBlur={handleOnBlur}
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleInputEmail1"
                                         aria-describedby="emailHelp"
                                         required></input>
-                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Bank</label>
+                                <div className="mb-3">
+                                    <label for="exampleInputPassword1" className="form-label">Bank</label>
                                     <input
                                         type="text"
                                         name='bank'
                                         onBlur={handleOnBlur}
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleInputPassword1"
                                         required></input>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Account No</label>
+                                <div className="mb-3">
+                                    <label for="exampleInputPassword1" className="form-label">Account No</label>
                                     <input
                                         type="number"
                                         name='accountno'
                                         onBlur={handleOnBlur}
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleInputPassword1"
                                         required></input>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Amount</label>
+                                <div className="mb-3">
+                                    <label for="exampleInputPassword1" className="form-label">Amount</label>
                                     <input
                                         type="number"
                                         name='amount'
                                         onBlur={handleOnBlur}
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleInputPassword1"
                                         required></input>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" className="btn btn-bg rounded-pill fw-bold">Submit</button>
                             </form>
                         </div>
                     </div>

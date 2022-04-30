@@ -1,6 +1,5 @@
-
+import Image from 'next/image';
 import React, { useState } from 'react';
-
 
 const WriteReview = () => {
     const [review, setReview] = useState({})
@@ -41,27 +40,42 @@ const WriteReview = () => {
 
 
     return (
-        <div>
-            <h2>Write Review</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="name"
-                    className='mb-3'
-                    placeholder="Your Name"
-                    onBlur={handleOnBlur} />
-                <br />
-                <textarea
-                    placeholder='Write your review'
-                    name="review"
-                    onBlur={handleOnBlur}
-                    rows="4"
-                    cols="50"></textarea>
-                <br />
+        <>
+            <div className='card border-0 merchant-form p-5 mt-3'>
+                <h1 className="merchant-title fw-bold my-4">Give Your <span className="merchant-title-color">Feedback</span></h1>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-md-6'>
+                            <form className="row g-3" onSubmit={handleSubmit}>
+                                <div className="col-md-12">
+                                    <h6 className="label my-3">Your Name</h6>
+                                    <input type="text" className="form-control" id="inputName4" name="name" onBlur={handleOnBlur} />
+                                </div>
+                                <div className="col-md-12">
+                                    <h6 className="label my-3">Your Feedback</h6>
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="review" onBlur={handleOnBlur}></textarea>
+                                </div>
+                                <div className="col-12">
+                                    <button type="submit" className="btn btn-bg rounded-pill">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div className='col-md-6'>
+                            <div className=''>
+                                <Image
+                                    alt="banner"
+                                    src="/feedback.svg"
+                                    layout="responsive"
+                                    width={700}
+                                    height={475}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <button type="submit">Post</button>
-            </form>
-        </div>
+            </div>
+        </>
     );
 };
 

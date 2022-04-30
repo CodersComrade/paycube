@@ -3,7 +3,6 @@ import Sidenav from "../components/Sidenav";
 import Mobilenav from "../components/Mobilenav";
 import useAuth from "../components/hooks/useAuth";
 import { useEffect, useState } from "react";
-import WriteReview from "../components/WriteReview";
 
 const Profile = () => {
   const { user } = useAuth();
@@ -74,8 +73,6 @@ const Profile = () => {
                 )}
               </div>
             </div>
-
-            <WriteReview></WriteReview>
           </div>
         </div>
       </div>

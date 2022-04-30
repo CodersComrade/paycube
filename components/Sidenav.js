@@ -3,6 +3,7 @@ import useAuth from './hooks/useAuth';
 
 const Sidenav = () => {
     const { user } = useAuth();
+
     return (
         <>
             <div className='container-fluid p-3 sidenav sticky-top'>
@@ -14,7 +15,7 @@ const Sidenav = () => {
                             <img src={user.photoURL} className="img-fluid profile-pic" alt="profile-pic" />
                         </div>
                         <div className='col-md-8'>
-                            <p className='fw-bold id-name'>{user.displayName}</p>
+                            <p className='fw-bold id-name'>{user.userName}</p>
                         </div>
                     </div>
                 </div>
@@ -46,6 +47,9 @@ const Sidenav = () => {
                     </p>
                     <p className='menu'>
                         <Link href="/merchant"><span>Be A Merchant</span></Link>
+                    </p>
+                    <p className='menu'>
+                        <Link href="/feedback"><span>Feedback</span></Link>
                     </p>
                 </div>
             </div>

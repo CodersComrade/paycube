@@ -12,19 +12,21 @@ const Reviews = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Show review</h1>
-            <div class="container">
-                <div class="row">
+        <>
+            <h1 className='banner-title mb-5 fw-bold text-center'>Customer <span className='title-color'>Reviews</span></h1>
+            <div className='container-fluid review-section'>
+                <div className="container">
+                    <div className="row g-5">
 
-                    {
-                        reviews.map(review => <Review review={review}></Review>)
-                    }
+                        {
+                            reviews.map(review => <Review review={review}></Review>)
+                        }
 
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+        </>
     );
 };
 

@@ -87,7 +87,7 @@ const Budgetplans = () => {
                                 </form>
                             </Modal>
                             <div className="container mt-5">
-                                <div className="row">
+                                <div className="row g-4">
                                     {
                                         budget.map(data => <BudgetCard key={data._id} budget={data}></BudgetCard>)
                                     }

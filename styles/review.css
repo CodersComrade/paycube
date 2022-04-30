@@ -1,0 +1,12 @@
+.review-section {
+    background-color: #55428F;
+    clip-path: polygon(50% 0%, 100% 9%, 100% 91%, 0 100%, 0 9%);
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.quote-logo {
+    font-size: 2rem;
+    color: #55428F;
+    background-color: #FFFFFF;
+}
