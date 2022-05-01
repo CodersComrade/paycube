@@ -51,7 +51,7 @@ export default class Areachart extends PureComponent {
 
     render() {
         return (
-            <ResponsiveContainer width="90%" height="60%">
+            <ResponsiveContainer width="100%" height="60%">
                 <AreaChart
                     width={500}
                     height={400}

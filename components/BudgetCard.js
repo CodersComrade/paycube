@@ -6,7 +6,8 @@ const BudgetCard = ({ budget }) => {
         bordeRadius: '50px',
         background: 'linear-gradient(145deg, #e6e6e6, #ffffff)',
         boxShadow: '20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff',
-        borderLeft: '3px solid #55428F'
+        borderLeft: '5px solid #55428F',
+        clipPath: 'polygon(20% 0%, 78% 0, 100% 24%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 0)'
     };
     return (
         <div className='col-md-3'>

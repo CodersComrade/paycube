@@ -21,8 +21,8 @@ export default function Home() {
       <Navbar></Navbar>
       <Mainbanner></Mainbanner>
       <Subbanner></Subbanner>
-      <Features></Features>
       <Keyfeatures></Keyfeatures>
+      <Features></Features>
       <Reviews></Reviews>
       <App></App>
       <Brands></Brands>

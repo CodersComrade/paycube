@@ -61,7 +61,7 @@ export default class Example extends PureComponent {
 
     render() {
         return (
-            <ResponsiveContainer width="90%" height="60%">
+            <ResponsiveContainer width="100%" height="60%">
                 <LineChart width={500} height={300} data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" padding={{ left: 30, right: 30 }} />

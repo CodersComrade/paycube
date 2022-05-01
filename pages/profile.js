@@ -29,10 +29,10 @@ const Profile = () => {
                   (currentUser) =>
 
                     user.email == currentUser.email && (
-                      <div className="row g-3">
+                      <div className="row g-5">
                         <div className="col-md-4">
                           <img
-                            src={user.photoURL}
+                            src="/profilepic.svg"
                             className="img-fluid rounded-start"
                             alt="..."
                           />
@@ -48,7 +48,7 @@ const Profile = () => {
                             <p className="card-text text-dark fs-5">
                               User ID:{" "}
                               <span className="info-color fw-bold">
-                                #143654
+                                {currentUser._id}
                               </span>
                             </p>
                             <p className="card-text text-dark fs-5">
