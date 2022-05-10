@@ -64,6 +64,9 @@ const Sidenav = () => {
                     <p className='menu'>
                         <Link href="/feedback"><span>Feedback</span></Link>
                     </p>
+                    <p className='menu'>
+                        <Link href="/needhelp"><span>Need Help ?</span></Link>
+                    </p>
                 </div>
             </div>
         </>

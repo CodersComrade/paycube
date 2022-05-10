@@ -5,7 +5,7 @@ const Review = ({ review }) => {
 
         <div className="col-md-4">
 
-            <div className="card border-0 rounded-3">
+            <div className="card border-0 rounded-3 shadow-lg">
                 <div className="card-header quote-logo">
                     #
                 </div>

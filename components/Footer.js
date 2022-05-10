@@ -30,7 +30,7 @@ const Footer = () => {
                 <h6 className="text-muted copyright mt-5 text-center">&#9400; Created By <span className="company-name">CodersComrade</span> || All Rights Resurved</h6>
             </div>
         </>
-    );
+    )
 };
 
 export default Footer;

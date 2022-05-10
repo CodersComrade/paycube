@@ -42,7 +42,7 @@ const Mobilenav = () => {
                                     <Link href="/merchant"><span>Be A Merchant</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
-                                    <Link href="/approve"><span>Approve Request</span></Link>
+                                    <Link href="/feedback"><span>Feedback</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
                                     {user?.email && <>
