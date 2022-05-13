@@ -3,6 +3,7 @@ import Sidenav from "../components/Sidenav";
 import Mobilenav from "../components/Mobilenav";
 import useAuth from "../components/hooks/useAuth";
 import { useEffect, useState } from "react";
+import Link from 'next/link';
 
 const Profile = () => {
   const { user } = useAuth();
@@ -64,7 +65,7 @@ const Profile = () => {
                               </span>
                             </p>
                             <button className="btn btn-bg rounded-pill fw-bold mt-4">
-                              Edit Profile
+                              <Link href='/editprofile'>Edit Profile</Link>
                             </button>
                           </div>
                         </div>
