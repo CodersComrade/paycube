@@ -41,6 +41,9 @@ const Sidenav = () => {
                         <Link href="/profile"><span>Profile</span></Link>
                     </p>
                     <p className='menu'>
+                        <Link href="/sendmoney"><span>Send Money</span></Link>
+                    </p>
+                    <p className='menu'>
                         <Link href="/accounts"><span>My Wallet</span></Link>
                     </p>
                     <p className='menu'>
