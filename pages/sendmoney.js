@@ -13,6 +13,7 @@ const Sendmoney = () => {
     const [receiverNumber, setReceiverNumber] = useState();
     const [receiverEmailId, setReceiverEmailId] = useState();
     const [sendingAmount, setSendingAmount] = useState();
+    const [currentUsers, setCurrentUsers] = useState([]);
 
     const onSubmit = (data) => {
         data.senderEmail = user.email;
@@ -29,6 +30,18 @@ const Sendmoney = () => {
         setSendingAmount(data.sendAmount);
         alert("Successfully Send")
     };
+
+    useEffect(() => {
+        fetch("https://stormy-fortress-30009.herokuapp.com/users")
+            .then((res) => res.json())
+            .then((data) => setCurrentUsers(data));
+    }, []);
+
+    currentUsers.map(currentUser => {
+        if (user.email == currentUser.email) {
+            console.log(currentUser._id)
+        }
+    })
 
     return (
         <>
@@ -82,35 +95,37 @@ const Sendmoney = () => {
                                                             <h5 className="modal-title fs-4 fw-bold" id="exampleModalLabel">Confirm Payment</h5>
                                                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form>
-                                                            <div className="modal-body">
-                                                                <h6 className="label my-3">Receiver Number </h6>
-                                                                <input
-                                                                    required
-                                                                    className="form-control"
-                                                                    value={receiverNumber}
-                                                                />
-                                                                <br />
-                                                                <h6 className="label my-3">Receiver Email </h6>
-                                                                <input
-                                                                    required
-                                                                    className="form-control"
-                                                                    value={receiverEmailId}
-                                                                />
-                                                                <br />
-                                                                <h6 className="label my-3">Amount </h6>
-                                                                <input
-                                                                    required
-                                                                    className="form-control"
-                                                                    value={sendingAmount}
-                                                                />
-                                                                <br />
-                                                            </div>
-                                                            <div className="modal-footer">
-                                                                <button type="button" className="btn btn-outline btn-bg fw-bold rounded-pill" data-bs-dismiss="modal">Close</button>
-                                                                <button type="submit" className="btn-bg fw-bold btn rounded-pill">Confirm</button>
-                                                            </div>
-                                                        </form>
+                                                        <div>
+                                                            <form>
+                                                                <div className="modal-body">
+                                                                    <h6 className="label my-3">Receiver Number </h6>
+                                                                    <input
+                                                                        required
+                                                                        className="form-control"
+                                                                        value={receiverNumber}
+                                                                    />
+                                                                    <br />
+                                                                    <h6 className="label my-3">Receiver Email </h6>
+                                                                    <input
+                                                                        required
+                                                                        className="form-control"
+                                                                        value={receiverEmailId}
+                                                                    />
+                                                                    <br />
+                                                                    <h6 className="label my-3">Amount </h6>
+                                                                    <input
+                                                                        required
+                                                                        className="form-control"
+                                                                        value={sendingAmount}
+                                                                    />
+                                                                    <br />
+                                                                </div>
+                                                                <div className="modal-footer">
+                                                                    <button type="button" className="btn btn-outline btn-bg fw-bold rounded-pill" data-bs-dismiss="modal">Close</button>
+                                                                    <button type="submit" className="btn-bg fw-bold btn rounded-pill">Confirm</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
