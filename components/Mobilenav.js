@@ -49,7 +49,7 @@ const Mobilenav = () => {
                                 </li>
                                 <li className="nav-item menu m-1">
                                     {user?.email && <>
-                                        <btn onClick={logOut} className="btn-bg fw-bold btn rounded-pill">Logout</btn>
+                                        <button onClick={logOut} className="btn-bg fw-bold btn rounded-pill">Logout</button>
                                     </>}
                                 </li>
                             </ul>

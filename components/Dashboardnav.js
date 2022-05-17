@@ -12,7 +12,7 @@ const Dashboardnav = () => {
                             <button className="btn btn-bg fw-bold rounded-pill ms-2" type="submit">Search</button>
                         </form>
                         {user?.email && <>
-                            <btn onClick={logOut} className="btn-bg fw-bold btn rounded-pill">Logout</btn>
+                            <button onClick={logOut} className="btn-bg fw-bold btn rounded-pill">Logout</button>
                         </>}
                     </div>
                 </nav>
