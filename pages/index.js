@@ -9,6 +9,7 @@ import Brands from '../components/Brands'
 import Reviews from '../components/Reviews'
 import Keyfeatures from '../components/Keyfeatures'
 import KommunicateChat from '../components/KommunicateChat'
+import Zoom from 'react-reveal/Zoom';
 
 export default function Home() {
   return (
@@ -20,12 +21,12 @@ export default function Home() {
       </Head>
       <Navbar></Navbar>
       <Mainbanner></Mainbanner>
-      <Subbanner></Subbanner>
-      <Keyfeatures></Keyfeatures>
-      <Features></Features>
-      <Reviews></Reviews>
-      <App></App>
-      <Brands></Brands>
+      <Zoom><Subbanner></Subbanner></Zoom>
+      <Zoom><Keyfeatures></Keyfeatures></Zoom>
+      <Zoom><Features></Features></Zoom>
+      <Zoom><Reviews></Reviews></Zoom>
+      <Zoom><App></App></Zoom>
+      <Zoom><Brands></Brands></Zoom>
       <Footer></Footer>
       <KommunicateChat></KommunicateChat>
     </>

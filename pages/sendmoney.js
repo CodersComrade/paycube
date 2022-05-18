@@ -28,7 +28,6 @@ const Sendmoney = () => {
         setReceiverNumber(data.receiverNo);
         setReceiverEmailId(data.receiverEmail);
         setSendingAmount(data.sendAmount);
-        alert("Successfully Send")
     };
 
     useEffect(() => {

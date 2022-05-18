@@ -21,7 +21,10 @@ const Footer = () => {
                                 <Link className="navbar-brand" href="/"><img src="/logo.png" className="img-fluid logo" alt="logo" /></Link>
                                 <p className="text-muted">Your Money Manager</p>
                                 <h2 className="follow-us-title fs-3 mt-3 fw-bold">Follow <span className="fu-color">Us</span></h2>
-                                <div className="social-icons mt-3 p-3">
+                                <div className="social-icons mt-1">
+                                    <Link href="https://www.facebook.com/PayCube-112586644787230"><i className="fab fa-facebook text-white fs-2 m-2 social-icon"></i></Link>
+                                    <Link href="https://www.linkedin.com/in/coders-comrade-b0139623b/"><i className="fab fa-linkedin text-white fs-2 m-2 social-icon"></i></Link>
+                                    <Link href="https://github.com/CodersComrade"><i className="fab fa-github text-white fs-2 m-2 social-icon"></i></Link>
                                 </div>
                             </div>
                         </div>

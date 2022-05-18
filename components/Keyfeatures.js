@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Zoom from 'react-reveal/Zoom';
 
 const Keyfeatures = () => {
     return (
@@ -8,13 +9,15 @@ const Keyfeatures = () => {
                     <div className="row g-5">
                         <div className="col-md-6">
                             <div className='mt-5'>
-                                <Image
-                                    alt="Mountains"
-                                    src="/keyfeature.svg"
-                                    layout="responsive"
-                                    width={700}
-                                    height={475}
-                                />
+                                <Zoom>
+                                    <Image
+                                        alt="Mountains"
+                                        src="/keyfeature.svg"
+                                        layout="responsive"
+                                        width={700}
+                                        height={475}
+                                    />
+                                </Zoom>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -26,84 +29,96 @@ const Keyfeatures = () => {
                                     <div className='col-md-6'>
                                         <div className="card mb-3 p-3 feature-boxes border-0">
                                             <div className="row g-0">
-                                                <div className="col-md-3">
-                                                    <img src="/addmoney.svg" className="img-fluid rounded-start" alt="..." />
-                                                </div>
-                                                <div className="col-md-9">
-                                                    <div className="card-body">
-                                                        <p className="card-text fw-bold text-muted feature-text">Add Money</p>
+                                                <Zoom>
+                                                    <div className="col-md-3">
+                                                        <img src="/addmoney.svg" className="img-fluid rounded-start" alt="..." />
                                                     </div>
-                                                </div>
+                                                    <div className="col-md-9">
+                                                        <div className="card-body">
+                                                            <p className="card-text fw-bold text-muted feature-text">Add Money</p>
+                                                        </div>
+                                                    </div>
+                                                </Zoom>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='col-md-6'>
                                         <div className="card mb-3 p-3 feature-boxes border-0">
                                             <div className="row g-0">
-                                                <div className="col-md-3">
-                                                    <img src="/budget.svg" className="img-fluid rounded-start" alt="..." />
-                                                </div>
-                                                <div className="col-md-9">
-                                                    <div className="card-body">
-                                                        <p className="card-text fw-bold text-muted feature-text">Budget Planner</p>
+                                                <Zoom>
+                                                    <div className="col-md-3">
+                                                        <img src="/budget.svg" className="img-fluid rounded-start" alt="..." />
                                                     </div>
-                                                </div>
+                                                    <div className="col-md-9">
+                                                        <div className="card-body">
+                                                            <p className="card-text fw-bold text-muted feature-text">Budget Planner</p>
+                                                        </div>
+                                                    </div>
+                                                </Zoom>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='col-md-6'>
                                         <div className="card mb-3 p-3 feature-boxes border-0">
                                             <div className="row g-0">
-                                                <div className="col-md-3">
-                                                    <img src="/tracker.svg" className="img-fluid rounded-start" alt="..." />
-                                                </div>
-                                                <div className="col-md-9">
-                                                    <div className="card-body">
-                                                        <p className="card-text fw-bold text-muted feature-text">Expence Tracker</p>
+                                                <Zoom>
+                                                    <div className="col-md-3">
+                                                        <img src="/tracker.svg" className="img-fluid rounded-start" alt="..." />
                                                     </div>
-                                                </div>
+                                                    <div className="col-md-9">
+                                                        <div className="card-body">
+                                                            <p className="card-text fw-bold text-muted feature-text">Expence Tracker</p>
+                                                        </div>
+                                                    </div>
+                                                </Zoom>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='col-md-6'>
                                         <div className="card mb-3 p-3 feature-boxes border-0">
                                             <div className="row g-0">
-                                                <div className="col-md-3">
-                                                    <img src="/exchange.svg" className="img-fluid rounded-start" alt="..." />
-                                                </div>
-                                                <div className="col-md-9">
-                                                    <div className="card-body">
-                                                        <p className="card-text fw-bold text-muted feature-text">Exchange Rates</p>
+                                                <Zoom>
+                                                    <div className="col-md-3">
+                                                        <img src="/exchange.svg" className="img-fluid rounded-start" alt="..." />
                                                     </div>
-                                                </div>
+                                                    <div className="col-md-9">
+                                                        <div className="card-body">
+                                                            <p className="card-text fw-bold text-muted feature-text">Exchange Rates</p>
+                                                        </div>
+                                                    </div>
+                                                </Zoom>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='col-md-6'>
                                         <div className="card mb-3 p-3 feature-boxes border-0">
                                             <div className="row g-0">
-                                                <div className="col-md-3">
-                                                    <img src="/bemarchant.svg" className="img-fluid rounded-start" alt="..." />
-                                                </div>
-                                                <div className="col-md-9">
-                                                    <div className="card-body">
-                                                        <p className="card-text fw-bold text-muted feature-text">Be A Merchant</p>
+                                                <Zoom>
+                                                    <div className="col-md-3">
+                                                        <img src="/bemarchant.svg" className="img-fluid rounded-start" alt="..." />
                                                     </div>
-                                                </div>
+                                                    <div className="col-md-9">
+                                                        <div className="card-body">
+                                                            <p className="card-text fw-bold text-muted feature-text">Be A Merchant</p>
+                                                        </div>
+                                                    </div>
+                                                </Zoom>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='col-md-6'>
                                         <div className="card mb-3 p-3 feature-boxes border-0">
                                             <div className="row g-0">
-                                                <div className="col-md-3">
-                                                    <img src="/analytics.svg" className="img-fluid rounded-start" alt="..." />
-                                                </div>
-                                                <div className="col-md-9">
-                                                    <div className="card-body">
-                                                        <p className="card-text fw-bold text-muted feature-text">Analytics</p>
+                                                <Zoom>
+                                                    <div className="col-md-3">
+                                                        <img src="/analytics.svg" className="img-fluid rounded-start" alt="..." />
                                                     </div>
-                                                </div>
+                                                    <div className="col-md-9">
+                                                        <div className="card-body">
+                                                            <p className="card-text fw-bold text-muted feature-text">Analytics</p>
+                                                        </div>
+                                                    </div>
+                                                </Zoom>
                                             </div>
                                         </div>
                                     </div>

@@ -51,3 +51,7 @@
 .company-name {
     color: #FFFFFF;
 }
+
+.social-icon {
+    cursor: pointer;
+}

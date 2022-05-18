@@ -9,10 +9,10 @@ const Register = () => {
   const [loginData, setLoginData] = useState({});
   const { user, registerUser, signInUsingGoogle, isLoading, Error } =
     useAuth();
-    const router = useRouter();
+  const router = useRouter();
 
   const handleOnBlur = (e, data) => {
-    
+
     const field = e.target.name;
     const value = e.target.value;
     const newLoginData = { ...loginData };
@@ -25,19 +25,23 @@ const Register = () => {
 
   const handleLoginSubmit = (e, data) => {
     loginData.balance = 5000;
+    if (loginData.password.length < 6) {
+      alert("Password must be at-least Six Character");
+      return;
+    }
     if (loginData.password !== loginData.reTypePassword) {
       alert("didnt match");
       return;
     }
     registerUser(loginData.email, loginData.password, loginData.name, loginData.balance);
 
-    fetch("https://stormy-fortress-30009.herokuapp.com/users",{
+    fetch("https://stormy-fortress-30009.herokuapp.com/users", {
       method: "POST",
-      headers: {"content-type": "application/json"},
-      body: JSON.stringify(loginData),            
-  })
-  .then( res => res.json())
-  .then(result => console.log(result))
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(loginData),
+    })
+      .then(res => res.json())
+      .then(result => console.log(result))
     // console.log(data);
     console.log(loginData)
     e.preventDefault();
@@ -58,7 +62,7 @@ const Register = () => {
                 Sign Up <span className="rl-title-color">For Free</span>
               </h2>
               <form onSubmit={handleLoginSubmit} className="row g-3">
-              <div className="col-md-12">
+                <div className="col-md-12">
                   <label
                     // htmlFor="inputEmail4"
                     className="form-label text-dark"
@@ -71,11 +75,11 @@ const Register = () => {
                     name="userName"
                     className="form-control"
                     required
-                    // id="inputEmail4"
-                    // autoComplete="off"
+                  // id="inputEmail4"
+                  // autoComplete="off"
                   />
-                </div>          
-           
+                </div>
+
                 <div className="col-md-12">
                   <label
                     htmlFor="inputEmail4"
@@ -152,14 +156,6 @@ const Register = () => {
                   >
                     Register
                   </button>
-                </div>
-                <div className="col-md-6">
-                  <btn
-                    className="btn-bg fw-bold btn rounded-pill"
-                    onClick={signInUsingGoogle}
-                  >
-                    Google
-                  </btn>
                 </div>
                 <div className="col-md-12">
                   <p className="redirect-text">

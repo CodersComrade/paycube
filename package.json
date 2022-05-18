@@ -20,6 +20,7 @@
     "react-bootstrap": "^2.2.3",
     "react-dom": "18.0.0",
     "react-hook-form": "^7.29.0",
+    "react-reveal": "^1.2.2",
     "recharts": "^2.1.9",
     "webpack": "^5.72.0"
   },

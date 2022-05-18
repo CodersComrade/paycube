@@ -6,4 +6,13 @@
 .menu {
     margin-bottom: 10px;
     cursor: pointer;
+    transition: .4s linear;
+}
+
+.menu:hover {
+    padding: 10px;
+    background-color: #55428F;
+    color: #FFFFFF;
+    border-radius: 18px;
+    font-weight: bold;
 }

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from "next/link";
+import Zoom from 'react-reveal/Zoom';
 
 const Slide2 = () => {
     return (
@@ -18,13 +19,15 @@ const Slide2 = () => {
                             </div>
                         </div>
                         <div className='col-md-7'>
-                            <Image
-                                alt="banner"
-                                src="/bannerimg2.svg"
-                                layout="responsive"
-                                width={700}
-                                height={475}
-                            />
+                            <Zoom>
+                                <Image
+                                    alt="banner"
+                                    src="/bannerimg2.svg"
+                                    layout="responsive"
+                                    width={700}
+                                    height={475}
+                                />
+                            </Zoom>
                         </div>
                     </div>
                 </div>
