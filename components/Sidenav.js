@@ -7,7 +7,7 @@ const Sidenav = () => {
     const [currentUsers, setCurrentUsers] = useState([]);
 
     useEffect(() => {
-        fetch("https://stormy-fortress-30009.herokuapp.com/users")
+        fetch("https://vast-oasis-72771.herokuapp.com/users")
             .then((res) => res.json())
             .then((data) => setCurrentUsers(data));
     }, []);

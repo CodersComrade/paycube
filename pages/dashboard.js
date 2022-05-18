@@ -11,13 +11,18 @@ const Dashboard = () => {
   const [currentUsers, setCurrentUsers] = useState([]);
 
   useEffect(() => {
-    fetch("https://stormy-fortress-30009.herokuapp.com/users")
+    fetch("https://vast-oasis-72771.herokuapp.com/users")
       .then((res) => res.json())
       .then((data) => setCurrentUsers(data));
   }, []);
 
+
+
+
+
   return (
     <>
+
       <Mobilenav></Mobilenav>
       <div className="container-fluid dashboard">
         <div className="row g-0">
@@ -62,7 +67,7 @@ const Dashboard = () => {
                               Balance
                             </h5>
                             <h3 className="card-subtitle mb-2 text-white amount">
-                              {currentUser.balance}
+                              {parseInt(currentUser.balance) + parseInt(currentUser.newAmount)}
                             </h3>
                           </div>
                         </div>
