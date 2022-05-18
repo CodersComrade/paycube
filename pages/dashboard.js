@@ -62,7 +62,7 @@ const Dashboard = () => {
                               Balance
                             </h5>
                             <h3 className="card-subtitle mb-2 text-white amount">
-                              {currentUser.balance}
+                            {parseInt(currentUser.balance) + parseInt(currentUser?.addMoney)}
                             </h3>
                           </div>
                         </div>
