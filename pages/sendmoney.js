@@ -52,7 +52,6 @@ const Sendmoney = () => {
                     </div>
                     <div className="col-md-10 dashboard">
                         <Dashboardnav></Dashboardnav>
-
                         <div className="card border-0 merchant-form p-5 mt-3">
                             <h1 className="merchant-title fw-bold my-4">Give Receiver <span className="merchant-title-color">Information</span></h1>
                             <div className='container'>
