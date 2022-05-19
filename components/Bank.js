@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import useAuth from './hooks/useAuth';
 
 const Bank = ({ bank }) => {
+    const { user } = useAuth();
     const [addMoneyInfo, setAddMoneyInfo] = useState({})
 
     const handleOnBlur = e => {
@@ -15,28 +17,25 @@ const Bank = ({ bank }) => {
 
     const handleSubmit = e => {
 
-        // fetch(`https://vast-oasis-72771.herokuapp.com/addMoney`, {
-        fetch(`https://vast-oasis-72771.herokuapp.com/addMoney`, {
-
-            method: 'POST',
+        fetch(`https://stormy-fortress-30009.herokuapp.com/users/${user.email}_${addMoneyInfo.amount}`, {
+            method: 'PUT',
             headers: {
-                'Content-Type': 'application/json'
-
+                'content-type': 'application/json'
             },
             body: JSON.stringify(addMoneyInfo)
         })
-
             .then(res => res.json())
             .then(data => {
-                if (data.insertedId) {
-                    alert('Money added')
+                if (data.modifiedCount) {
+                    console.log(data);
 
+                    alert('Money added')
                 }
             })
-
-        e.preventDefault();
-
+        e.preventDefault()
     }
+
+
 
     return (
         <div className="container">
@@ -82,26 +81,8 @@ const Bank = ({ bank }) => {
                                         required></input>
                                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                 </div>
-                                <div className="mb-3">
-                                    <label for="exampleInputPassword1" className="form-label">Bank</label>
-                                    <input
-                                        type="text"
-                                        name='bank'
-                                        onBlur={handleOnBlur}
-                                        className="form-control"
-                                        id="exampleInputPassword1"
-                                        required></input>
-                                </div>
-                                <div className="mb-3">
-                                    <label for="exampleInputPassword1" className="form-label">Account No</label>
-                                    <input
-                                        type="number"
-                                        name='accountno'
-                                        onBlur={handleOnBlur}
-                                        className="form-control"
-                                        id="exampleInputPassword1"
-                                        required></input>
-                                </div>
+
+
                                 <div className="mb-3">
                                     <label for="exampleInputPassword1" className="form-label">Amount</label>
                                     <input

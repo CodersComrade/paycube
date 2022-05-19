@@ -14,6 +14,17 @@ const Sendmoney = () => {
     const [receiverEmailId, setReceiverEmailId] = useState();
     const [sendingAmount, setSendingAmount] = useState();
     const [currentUsers, setCurrentUsers] = useState([]);
+    const [sendMoneyInfo, setSendMoneyInfo] = useState({});
+
+    const handleOnBlur = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newSendMoneyData = { ...sendMoneyInfo };
+        newSendMoneyData[field] = value;
+        setSendMoneyInfo(newSendMoneyData);
+
+
+    }
 
     const onSubmit = (data) => {
         data.senderEmail = user.email;
@@ -29,6 +40,26 @@ const Sendmoney = () => {
         setReceiverEmailId(data.receiverEmail);
         setSendingAmount(data.sendAmount);
     };
+
+    const handleSubmitForm = e => {
+
+        fetch(`https://stormy-fortress-30009.herokuapp.com/users/${user.email}_${sendMoneyInfo.sendMoney}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(sendMoneyInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    console.log(data);
+
+                    alert('Money added')
+                }
+            })
+        e.preventDefault()
+    }
 
     useEffect(() => {
         fetch("https://stormy-fortress-30009.herokuapp.com/users")
@@ -74,6 +105,7 @@ const Sendmoney = () => {
                                             <br />
                                             <h6 className="label my-3">Amount </h6>
                                             <input
+                                                type="number"
                                                 {...register("sendAmount")}
                                                 required
                                                 className="form-control"
@@ -107,8 +139,18 @@ const Sendmoney = () => {
                                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div>
-                                            <form>
+                                            <form onSubmit={handleSubmitForm}>
                                                 <div className="modal-body">
+                                                    <h6 className="label my-3">Sender Email </h6>
+                                                    <input
+                                                        type="email"
+                                                        required
+                                                        name='email'
+                                                        onBlur={handleOnBlur}
+                                                        className="form-control"
+                                                        value={user.email}
+                                                    />
+                                                    <br />
                                                     <h6 className="label my-3">Receiver Number </h6>
                                                     <input
                                                         required
@@ -125,6 +167,9 @@ const Sendmoney = () => {
                                                     <br />
                                                     <h6 className="label my-3">Amount </h6>
                                                     <input
+                                                        type="number"
+                                                        name='sendMoney'
+                                                        onBlur={handleOnBlur}
                                                         required
                                                         className="form-control"
                                                         value={sendingAmount}
@@ -132,7 +177,6 @@ const Sendmoney = () => {
                                                     <br />
                                                 </div>
                                                 <div className="modal-footer">
-                                                    <button type="button" className="btn btn-outline btn-bg fw-bold rounded-pill" data-bs-dismiss="modal">Close</button>
                                                     <button type="submit" className="btn-bg fw-bold btn rounded-pill">Confirm</button>
                                                 </div>
                                             </form>
