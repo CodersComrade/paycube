@@ -3,7 +3,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useState } from "react";
 import useAuth from "../components/hooks/useAuth";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import Swal from 'sweetalert2';
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
@@ -26,11 +27,23 @@ const Register = () => {
   const handleLoginSubmit = (e, data) => {
     loginData.balance = 5000;
     if (loginData.password.length < 6) {
-      alert("Password must be at-least Six Character");
+      // alert("Password must be at-least Six Character");
+      Swal.fire({
+        title: 'Warning!',
+        text: 'Password must be at-least Six Character',
+        icon: 'warning',
+        confirmButtonText: 'Okay'
+      })
       return;
     }
     if (loginData.password !== loginData.reTypePassword) {
-      alert("didnt match");
+      // alert("didnt match");
+      Swal.fire({
+        title: 'Warning!',
+        text: 'Did Not Match',
+        icon: 'warning',
+        confirmButtonText: 'Okay'
+      })
       return;
     }
     registerUser(loginData.email, loginData.password, loginData.name, loginData.balance);
@@ -46,6 +59,12 @@ const Register = () => {
     console.log(loginData)
     e.preventDefault();
     router.push('/dashboard')
+    Swal.fire({
+      title: 'Success!',
+      text: 'Successfully Sign Up',
+      icon: 'success',
+      confirmButtonText: 'Cool'
+    })
   };
 
   return (

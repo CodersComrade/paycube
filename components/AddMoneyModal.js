@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from './hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const AddMoneyModal = ({ account, isAddNewMoney }) => {
     const { user } = useAuth();
@@ -28,7 +29,13 @@ const AddMoneyModal = ({ account, isAddNewMoney }) => {
             axios.post('https://fierce-wildwood-99415.herokuapp.com/addedMoney', data).then(res => {
                 if (res.data.insertedId) {
                     isAddNewMoney(true);
-                    alert('added successfully');
+                    // alert('added successfully');
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
                     reset();
                 }
             });

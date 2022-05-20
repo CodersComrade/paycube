@@ -2,8 +2,9 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from './hooks/useAuth';
+import Swal from 'sweetalert2';
 
-const AddExpModal = ({account,isAddNewExp}) => {
+const AddExpModal = ({ account, isAddNewExp }) => {
     const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
 
@@ -28,56 +29,62 @@ const AddExpModal = ({account,isAddNewExp}) => {
             axios.post('https://fierce-wildwood-99415.herokuapp.com/addedExpence', data).then(res => {
                 if (res.data.insertedId) {
                     isAddNewExp(true);
-                    alert('added successfully');
+                    // alert('added successfully');
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
                     reset();
                 }
             });
         }
-       
+
     };
 
 
     return (
         <div className="modal-dialog">
-        <div  style={{ boxShadow: '1px 1px 4px 0px #55428F' }} className="modal-content">
-            <div className="modal-header d-flex justify-content-between align-items-center">
-                <h5 className="modal-title fs-2" id="exampleModalLabel">Add Expence</h5>
-                <button type="button" className="btn" data-bs-dismiss="modal" aria-label="Close">
-                    <img src="/close.png" style={{maxWidth: '30px'}} alt="" />
-                </button>
-            </div>
-            <div className="modal-body">
-                <form
-                    className="p-4"
-                    onSubmit={handleSubmit(onSubmit)}
-                >
-                    <div class="form-floating">
-                        <input
-                            type="text"
-                            class="form-control mb-3 fs-4 fw-bold"
-                            id="floatingPassword"
-                            placeholder="Reason Of Expence"
-                            {...register('reason', { required: true })}
-                        />
-                        <label for="floatingPassword">Reason Of Expence</label>
-                    </div> 
-                    <div class="form-floating">
-                        <input
-                            type="text"
-                            class="form-control mb-3 fs-4 fw-bold"
-                            id="floatingPassword"
-                            placeholder="Amount"
-                            {...register('amount', { required: true })}
-                        />
-                        <label for="floatingPassword">Enter Amount</label>
-                    </div> 
-                    <div>
-                    <input className="btn btn-bg rounded-3 text-uppercase w-100" type="submit" value='Add Money' />
-                    </div>
-                </form>
+            <div style={{ boxShadow: '1px 1px 4px 0px #55428F' }} className="modal-content">
+                <div className="modal-header d-flex justify-content-between align-items-center">
+                    <h5 className="modal-title fs-2" id="exampleModalLabel">Add Expence</h5>
+                    <button type="button" className="btn" data-bs-dismiss="modal" aria-label="Close">
+                        <img src="/close.png" style={{ maxWidth: '30px' }} alt="" />
+                    </button>
+                </div>
+                <div className="modal-body">
+                    <form
+                        className="p-4"
+                        onSubmit={handleSubmit(onSubmit)}
+                    >
+                        <div class="form-floating">
+                            <input
+                                type="text"
+                                class="form-control mb-3 fs-4 fw-bold"
+                                id="floatingPassword"
+                                placeholder="Reason Of Expence"
+                                {...register('reason', { required: true })}
+                            />
+                            <label for="floatingPassword">Reason Of Expence</label>
+                        </div>
+                        <div class="form-floating">
+                            <input
+                                type="text"
+                                class="form-control mb-3 fs-4 fw-bold"
+                                id="floatingPassword"
+                                placeholder="Amount"
+                                {...register('amount', { required: true })}
+                            />
+                            <label htmlFor="floatingPassword">Enter Amount</label>
+                        </div>
+                        <div>
+                            <input className="btn btn-bg rounded-3 text-uppercase w-100" type="submit" value='Add Money' />
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
     );
 };
 

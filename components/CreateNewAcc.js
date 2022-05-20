@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from './hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const CreateNewAcc = ({ addAccount }) => {
     const { user } = useAuth();
@@ -12,7 +13,13 @@ const CreateNewAcc = ({ addAccount }) => {
             axios.post('https://fierce-wildwood-99415.herokuapp.com/accounts', data).then(res => {
                 if (res.data.insertedId) {
                     addAccount();
-                    alert('added successfully');
+                    // alert('added successfully');
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
                     reset();
                 }
             })

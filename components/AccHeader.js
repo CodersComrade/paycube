@@ -2,7 +2,7 @@ import React from 'react';
 import AddExpModal from './AddExpModal';
 import AddMoneyModal from './AddMoneyModal';
 
-const AccHeader = ({account,isAddNewExp,isAddNewMoney}) => {
+const AccHeader = ({ account, isAddNewExp, isAddNewMoney }) => {
     return (
         <div className="container">
             <div className="row px-5 py-4 bg-white">

@@ -2,6 +2,7 @@ import Dashboardnav from "../components/Dashboardnav";
 import Sidenav from "../components/Sidenav";
 import Mobilenav from "../components/Mobilenav";
 import Image from 'next/image';
+import Swal from 'sweetalert2';
 
 import { useEffect, useState } from "react";
 import useAuth from "../components/hooks/useAuth";
@@ -55,7 +56,13 @@ const Sendmoney = () => {
                 if (data.modifiedCount) {
                     console.log(data);
 
-                    alert('Money added')
+                    // alert('successfully Send')
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Successfully Send',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
                 }
             })
         e.preventDefault()

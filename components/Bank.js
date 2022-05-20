@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useAuth from './hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const Bank = ({ bank }) => {
     const { user } = useAuth();
@@ -29,7 +30,13 @@ const Bank = ({ bank }) => {
                 if (data.modifiedCount) {
                     console.log(data);
 
-                    alert('Money added')
+                    // alert('Money added')
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Successfully Money Added',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
                 }
             })
         e.preventDefault()
@@ -99,7 +106,6 @@ const Bank = ({ bank }) => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };

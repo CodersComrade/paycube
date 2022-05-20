@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ExpDetails = ({addedExp}) => {
+const ExpDetails = ({ addedExp }) => {
     return (
         <div className="col-md-6">
-            <div style={{ boxShadow: '1px 1px 4px 0px #55428F' }} className="m-4 p-4 rounded-2 bg-white">
-                <h2 className='fs-2 mb-3'>Expence Details</h2>
+            <div style={{ boxShadow: '1px 1px 10px 0px #55428F' }} className="m-4 p-4 bg-white rounded-3">
+                <h2 className='fs-2 mb-3 fw-bold'>Expence Details</h2>
                 <div>
                     <table class="table table-striped table-hover">
                         <thead>
