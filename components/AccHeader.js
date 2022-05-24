@@ -15,9 +15,9 @@ const AccHeader = ({ account, isAddNewExp, isAddNewMoney }) => {
                     <div className="d-flex justify-content-center align-items-center">
                         <button
                             type="button" data-bs-toggle="modal" data-bs-target="#addMoneyModal"
-                            className="btn btn-outline w-100 my-2"
+                            className="btn btn-outline w-100 my-2 rounded-pill"
                         >
-                            Add Money
+                            Set Budget
                         </button>
                     </div>
                     {/* modal start */}
@@ -30,9 +30,9 @@ const AccHeader = ({ account, isAddNewExp, isAddNewMoney }) => {
                     <div className="d-flex justify-content-center align-items-center">
                         <button
                             type="button" data-bs-toggle="modal" data-bs-target="#addExpModal"
-                            className="btn btn-outline w-100 my-2"
+                            className="btn btn-outline w-100 my-2 rounded-pill"
                         >
-                            Exp. Money
+                            Add Expenced Amount
                         </button>
                     </div>
                     {/* modal start */}

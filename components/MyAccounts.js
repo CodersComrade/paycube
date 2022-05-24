@@ -26,7 +26,7 @@ const MyAccounts = () => {
                 <button
                     type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                     className='btn btn-outline text-capitalize fs-2 fw-bold'>
-                    create new Account
+                    Create New Scheme
                 </button>
             </div>
             {/* modal start */}
