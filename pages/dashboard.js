@@ -31,7 +31,7 @@ const Dashboard = () => {
                 (currentUser) =>
                   user.email == currentUser.email && (
                     <div className="row g-4">
-                      <div className="col-md-4">
+                      <div className="col-md-4 col-6">
                         <div className="card amount-box border-0 p-3">
                           <div className="card-body">
                             <h5 className="card-title amount-title mb-3 fw-bold">
@@ -43,7 +43,7 @@ const Dashboard = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-4 col-6">
                         <div className="card amount-box border-0 p-3">
                           <div className="card-body">
                             <h5 className="card-title amount-title mb-3 fw-bold">
@@ -55,7 +55,7 @@ const Dashboard = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-4 col-6">
                         <div className="card amount-box2 border-0 p-3">
                           <div className="card-body">
                             <h5 className="card-title amount-title mb-3 text-white fw-bold">

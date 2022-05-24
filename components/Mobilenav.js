@@ -30,6 +30,9 @@ const Mobilenav = () => {
                                     <Link href="/makepayment"><span>Make Payment</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">
+                                    <Link href="/order"><span>Payment History</span></Link>
+                                </li>
+                                <li className="nav-item menu m-1">
                                     <Link href="/budgetplans"><span>Budget Plans</span></Link>
                                 </li>
                                 <li className="nav-item menu m-1">

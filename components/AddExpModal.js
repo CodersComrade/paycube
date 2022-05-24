@@ -79,7 +79,7 @@ const AddExpModal = ({ account, isAddNewExp }) => {
                             <label htmlFor="floatingPassword">Enter Amount</label>
                         </div>
                         <div>
-                            <input className="btn btn-bg rounded-3 text-uppercase w-100" type="submit" value='Add Money' />
+                            <input className="btn btn-bg rounded-3 text-uppercase w-100" type="submit" value='Set Expensed Amount' />
                         </div>
                     </form>
                 </div>

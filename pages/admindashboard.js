@@ -30,7 +30,7 @@ const Admindashboard = () => {
                         <Dashboardnav></Dashboardnav>
                         <div className="container my-5">
                             <div className="row g-4">
-                                <div className="col-md-3">
+                                <div className="col-md-3 col-6">
                                     <div className="card mb-3 p-3 amount-box border-0">
                                         <div className="row g-0">
                                             <div className="col-md-8">
@@ -45,7 +45,7 @@ const Admindashboard = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-3">
+                                <div className="col-md-3 col-6">
                                     <div className="card mb-3 p-3 amount-box border-0">
                                         <div className="row g-0">
                                             <div className="col-md-8">
@@ -60,7 +60,7 @@ const Admindashboard = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-3">
+                                <div className="col-md-3 col-6">
                                     <div className="card mb-3 p-3 amount-box border-0">
                                         <div className="row g-0">
                                             <div className="col-md-8">
@@ -75,7 +75,7 @@ const Admindashboard = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-3">
+                                <div className="col-md-3 col-6">
                                     <div className="card mb-3 p-3 amount-box border-0">
                                         <div className="row g-0">
                                             <div className="col-md-8">
