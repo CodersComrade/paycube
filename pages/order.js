@@ -23,7 +23,6 @@ const Order = () => {
     }, []);
 
 
-
     return (
         <>
             <Mobilenav></Mobilenav>
@@ -36,52 +35,46 @@ const Order = () => {
                         <Dashboardnav></Dashboardnav>
                         <div>
                             <h1 className="merchant-title fw-bold my-5 text-center">Your Order History <span className="merchant-title-color">With PayCube</span></h1>
-                            {currentUsers.map(
-                                (currentUser) => user.email == currentUser.email && <div key={currentUser._id}>
-
-
-                                    <div >
-                                        <table className="table">
-                                            <thead>
-                                                <tr>
-
-                                                    <th scope="col">Seriel</th>
-                                                    <th scope="col">Product Image</th>
-                                                    <th scope="col">Product Name</th>
-                                                    <th scope="col">Product Price</th>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {
-                                                    orders.map(
-                                                        (order, index) => <tr>
-                                                            <th scope="row" key={order._id}>
-                                                                {index + 1}
-                                                            </th>
-                                                            <td>
-                                                                <img
-                                                                    className="img-fluid approve-img"
-                                                                    src={order.image}
-                                                                ></img>
-                                                            </td>
-                                                            <td className="fs-5">{order.name}</td>
-
-                                                            <td>
-                                                                <span className="merchant-title-color fw-bold fs-4">{order.price}</span>
-                                                            </td>
-                                                        </tr>)
-                                                }
-                                            </tbody>
-                                        </table>
-
-                                    </div>
 
 
 
+                            <div >
+                                <table className="table">
+                                    <thead>
+                                        <tr>
 
-                                </div>
-                            )}
+                                            <th scope="col">Seriel</th>
+                                            <th scope="col">Product Image</th>
+                                            <th scope="col">Product Name</th>
+                                            <th scope="col">Product Price</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            orders.map(
+                                                (order, index) => user.email == order.email && <tr>
+                                                    <th scope="row" key={order._id}>
+                                                        {index + 1}
+                                                    </th>
+                                                    <td>
+                                                        <img
+                                                            className="img-fluid approve-img"
+                                                            src={order.image}
+                                                        ></img>
+                                                    </td>
+                                                    <td className="fs-5">{order.name}</td>
+
+                                                    <td>
+                                                        <span className="merchant-title-color fw-bold fs-4">{order.price}</span>
+                                                    </td>
+                                                </tr>)
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
