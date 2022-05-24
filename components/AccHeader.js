@@ -32,7 +32,7 @@ const AccHeader = ({ account, isAddNewExp, isAddNewMoney }) => {
                             type="button" data-bs-toggle="modal" data-bs-target="#addExpModal"
                             className="btn btn-outline w-100 my-2 rounded-pill"
                         >
-                            Add Expenced Amount
+                            Add Expensed Amount
                         </button>
                     </div>
                     {/* modal start */}

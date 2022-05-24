@@ -8,7 +8,7 @@ const HighLightDetails = (props) => {
                     <div style={{ background: '#55428F', clipPath: "polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 51% 89%, 0 89%)" }} className="card text-white m-3 p-2 rounded-3">
                         <div className="card-body">
                             <h2 className="card-title fs-2">$ {props.ablBlnc}</h2>
-                            <p className="card-text">Total Budget</p>
+                            <p className="card-text">Available Balance</p>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ const HighLightDetails = (props) => {
                     <div style={{ background: '#7364a1', clipPath: "polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 51% 89%, 0 89%)" }} className="card text-white m-3 p-2 rounded-3">
                         <div className="card-body">
                             <h2 className="card-title fs-2">$ {props.expBlnc}</h2>
-                            <p className="card-text">Expenced Balance</p>
+                            <p className="card-text">Expensed Balance</p>
                         </div>
                     </div>
                 </div>
