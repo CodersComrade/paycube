@@ -1,8 +1,18 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import useAuth from "../components/hooks/useAuth";
+import { useEffect, useState } from "react";
 
 const WriteReview = () => {
     const [review, setReview] = useState({})
+    const [currentUsers, setCurrentUsers] = useState([]);
+
+    const { user } = useAuth();
+
+    useEffect(() => {
+        fetch("https://stormy-fortress-30009.herokuapp.com/users")
+            .then((res) => res.json())
+            .then((data) => setCurrentUsers(data));
+    }, []);
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -47,10 +57,15 @@ const WriteReview = () => {
                     <div className='row'>
                         <div className='col-md-6'>
                             <form className="row g-3" onSubmit={handleSubmit}>
-                                <div className="col-md-12">
-                                    <h6 className="label my-3">Your Name</h6>
-                                    <input type="text" className="form-control" id="inputName4" name="name" onBlur={handleOnBlur} />
-                                </div>
+                                {currentUsers.map(
+                                    (currentUser) =>
+                                        user.email == currentUser.email && (
+                                            <div className="col-md-12">
+                                                <h6 className="label my-3">Your Name</h6>
+                                                <input type="text" className="form-control" id="inputName4" name="name" value={currentUser?.userName} onBlur={handleOnBlur} />
+                                            </div>
+                                        )
+                                )}
                                 <div className="col-md-12">
                                     <h6 className="label my-3">Your Feedback</h6>
                                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="review" onBlur={handleOnBlur}></textarea>
